@@ -16,7 +16,11 @@ a {
 }
 
 .main-container{
-	position: relative;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
 }
 
 
@@ -124,6 +128,8 @@ Content Area
 	float: right;
 	width: calc(100% - 300px);
 	min-height: 630px;
+	height: 100%;
+	overflow: auto;
 }
 
 /*
@@ -187,7 +193,6 @@ Marble Art
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	overflow: auto;
 }
 
 .marble-art-item{
@@ -219,7 +224,6 @@ Oil Paintings
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	overflow: auto;
 }
 
 .oil-paingtings-item{
