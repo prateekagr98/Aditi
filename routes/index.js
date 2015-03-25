@@ -16,4 +16,30 @@ router.get('/', function (req, res, next) {
     });
 });
 
+router.get('/oilPaintings', function (req, res, next) {
+
+    glob("public/images/oil-paintings/*", null, function (er, imagePaths) {
+        var paths = _.map(imagePaths, function (item) {
+            return item.replace('public', '');
+        });
+        res.render('oil-paintings', {
+            page: 'oil-paintings',
+            imageSet: paths
+        });
+    });
+});
+
+router.get('/marbleArt', function (req, res, next) {
+
+    glob("public/images/marble-art/*", null, function (er, imagePaths) {
+        var paths = _.map(imagePaths, function (item) {
+            return item.replace('public', '');
+        });
+        res.render('marble-art', {
+            page: 'marble-art',
+            imageSet: paths
+        });
+    });
+});
+
 module.exports = router;

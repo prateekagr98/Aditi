@@ -9,18 +9,7 @@
 	</head>
 	<body>
 		<div class="main-container">
-			<div class="sidebar">
-				<div class="logo"></div>
-				<p class="caption">An Artist</p>
-				<div class="sidebar-items">	
-					<div class="sidebar-item pink">Photography</div>
-					<div class="sidebar-item dark-orange">Illustrations</div>
-					<div class="sidebar-item purple">Unposted Letters</div>
-					<div class="sidebar-item green">Blog</div>
-					<div class="sidebar-item orange">About</div>
-					<div class="sidebar-item blue">Contact</div>
-				</div>
-			</div>
+			<% include ./partials/sidebar %>
 			<div class="content-area">
 				<div class="homepage-slider">
 					<% for(var i=0; i<sliderSet.length; i++){ %>

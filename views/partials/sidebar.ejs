@@ -1,0 +1,28 @@
+<div class="sidebar">
+	<a href="/" class="logo"></a>
+	<p class="caption">An Artist</p>
+	<div class="sidebar-items">
+		
+		<% if(typeof page !== 'undefined' && page === 'oil-paintings'){ %>
+			<a href="/oilPaintings" class="sidebar-item pink" style="border-right-color: #F995F4">Oil Paintings</a>
+		<% } else { %>
+			<a href="/oilPaintings" class="sidebar-item pink">Oil Paintings</a>
+		<% } %>
+
+		<% if(typeof page !== 'undefined' && page === 'marble-art'){ %>
+			<a href="/marbleArt" class="sidebar-item dark-orange" style="border-right-color: #FFB54E">Marble Art</a>
+		<% } else { %>
+			<a href="/marbleArt" class="sidebar-item dark-orange">Marble Art</a>
+		<% } %>
+
+		<% if(typeof page !== 'undefined' && page === 'custom-gifts'){ %>
+			<a href="" class="sidebar-item purple" style="border-right-color: #A05FEF">Customized Gifts</a>
+		<% } else { %>	
+			<a href="" class="sidebar-item purple">Customized Gifts</a>
+		<% } %>
+
+		<a href="" class="sidebar-item green">Blog</a>
+		<a href="" class="sidebar-item orange">About</a>
+		<a href="" class="sidebar-item blue">Contact</a>
+	</div>
+</div>

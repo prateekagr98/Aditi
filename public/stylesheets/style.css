@@ -3,10 +3,12 @@ body {
 	margin: 0px;
 	border: 0px;
   	font: 14px 'Lucida Grande', Helvetica, Arial, sans-serif;
+  	background-color: #EEEEEE;
 }
 
 a {
- 	color: #00B7FF;
+ 	color: inherit;
+ 	text-decoration: none;
 }
 
 .clear{
@@ -30,6 +32,7 @@ Sidebar
 	width: 300px;
 	height: 100%;
 	background-color: #FFFFFF;
+	border-right: 1px solid #EEEEEE;
 
 	-webkit-box-sizing: border-box; /* Safari 3.0 - 5.0, Chrome 1 - 9, Android 2.1 - 3.x */
  	-moz-box-sizing: border-box;    /* Firefox 1 - 28 */
@@ -37,6 +40,7 @@ Sidebar
 }
 
 .logo{
+	display: block;
 	margin: auto;
 	width: 130px;
 	height: 130px;
@@ -53,6 +57,7 @@ Sidebar
 }
 
 .sidebar-item{
+	display: block;
 	padding: 9px;
 	text-align: center;
 	text-transform: uppercase;
@@ -130,6 +135,7 @@ Homepage Slider
     width: 100%;
     height: 5px;
     background-color: #3FA9F5;
+
     -webkit-animation-name: progress-bar; /* Chrome, Safari, Opera */
     -webkit-animation-duration: 3s; /* Chrome, Safari, Opera */
     animation-name: progress-bar;
@@ -169,18 +175,66 @@ Homepage Slider
 	background-size: cover;
 }
 
-.item-1{
-	background-image: url('../images/slider.jpg');
+/*
+==========================================
+Marble Art
+==========================================
+*/
+
+.marble-art{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
 }
 
-.item-2{
-	background-image: url('../images/slider2.jpg');
+.marble-art-item{
+	position: relative;
+	float: left;
+	width: 50%;
+	height: 50%;
+	border: 2px solid #EEEEEE;
+
+	-webkit-box-sizing: border-box; /* Safari 3.0 - 5.0, Chrome 1 - 9, Android 2.1 - 3.x */
+ 	-moz-box-sizing: border-box;    /* Firefox 1 - 28 */
+  	box-sizing: border-box;         /* Safari 5.1+, Chrome 10+, Firefox 29+, Opera 7+, IE 8+, Android 4.0+, iOS any */
 }
 
-.item-3{
-	background-image: url('../images/slider3.jpg');
+.marble-art-item img{
+	position: absolute;
+	top: 0px; left: 0px;
+	width: 100%;
+	overflow: hidden;
 }
 
-.item-4{
-	background-image: url('../images/slider4.jpg');
+/*
+============================================
+Oil Paintings
+============================================
+*/
+
+.oil-paingtings{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+}
+
+.oil-paingtings-item{
+	position: relative;
+	float: left;
+	width: 50%;
+	height: 50%;
+	border: 2px solid #EEEEEE;
+
+	-webkit-box-sizing: border-box; /* Safari 3.0 - 5.0, Chrome 1 - 9, Android 2.1 - 3.x */
+ 	-moz-box-sizing: border-box;    /* Firefox 1 - 28 */
+  	box-sizing: border-box;         /* Safari 5.1+, Chrome 10+, Firefox 29+, Opera 7+, IE 8+, Android 4.0+, iOS any */
+}
+
+.oil-paingtings-item img{
+	position: absolute;
+	top: 0px; left: 0px;
+	width: 100%;
+	overflow: hidden;
 }
