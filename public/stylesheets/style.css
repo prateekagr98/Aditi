@@ -54,6 +54,10 @@ Sidebar
 	margin-bottom: 30px;
 }
 
+.logo img{
+	width: 100%;
+}
+
 .caption{
 	text-align: center;
 	color: #545454;
@@ -68,11 +72,12 @@ Sidebar
 	text-transform: uppercase;
 	border-right: 5px solid #000000;
 	border-bottom: 1px solid #EEEEEE;
+	color: #FFFFFF;
 
-	-webkit-transition-property: background-color, border-right-color;
-    -moz-transition-property: background-color, border-right-color;
-    -o-transition-property: background-color, border-right-color;
-    ransition-property: background-color, border-right-color;
+	-webkit-transition-property: background-color, border-right-color, color;
+    -moz-transition-property: background-color, border-right-color, color;
+    -o-transition-property: background-color, border-right-color, color;
+    ransition-property: background-color, border-right-color, color;
     -webkit-transition-duration: 0.8s;
     -moz-transition-duration: 0.8s;
     -o-transition-duration: 0.8s;
@@ -220,27 +225,49 @@ Oil Paintings
 ============================================
 */
 
-.oil-paingtings{
+.oil-paintings{
 	position: absolute;
 	width: 100%;
 	height: 100%;
 }
 
-.oil-paingtings-item{
+.oil-paintings-item{
 	position: relative;
 	float: left;
 	width: 50%;
 	height: 50%;
-	border: 2px solid #EEEEEE;
+	border: 5px solid #EEEEEE;
+	border-left : 0px;
 
 	-webkit-box-sizing: border-box; /* Safari 3.0 - 5.0, Chrome 1 - 9, Android 2.1 - 3.x */
  	-moz-box-sizing: border-box;    /* Firefox 1 - 28 */
   	box-sizing: border-box;         /* Safari 5.1+, Chrome 10+, Firefox 29+, Opera 7+, IE 8+, Android 4.0+, iOS any */
 }
 
-.oil-paingtings-item img{
+.oil-paintings-item img{
 	position: absolute;
 	top: 0px; left: 0px;
 	width: 100%;
+	min-height: 100%;
 	overflow: hidden;
+
+	-webkit-transition-property: width, min-height, left, top;
+    -moz-transition-property: width, min-height, left, top;
+    -o-transition-property: width, min-height, left, top;
+    ransition-property: width, min-height, left, top;
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    -webkit-transition-timing-function: ease-in-out;
+    -moz-transition-timing-function: ease-in-out;
+    -o-transition-timing-function: ease-in-out;
+    transition-timing-function: ease-in-out;
+}
+
+.oil-paintings-item img:hover{
+	z-index: 200;
+	width: 110%;
+	left: -50px;
+	top: -30px;
 }
