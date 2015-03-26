@@ -3,6 +3,14 @@
     $(document).ready(function () {
         var slider = new Slider(4000);
         slider.start();
+        loadSound();
+        $('.birthday-container').on('click', function () {
+            pauseSound();
+        });
+
+        $('.close').on('click', function () {
+            hideBirthDay();
+        });
     });
 
     function Slider(timeInterval) {
@@ -43,3 +51,32 @@
     }
 
 })();
+
+var soundID = 'Birthday';
+
+function loadSound() {
+    createjs.Sound.registerSound("/birthday-song.mp3", soundID);
+    $('.birthday-image').hide();
+    setTimeout(function () {
+        createjs.Sound.play(soundID);
+        setTimeout(function () {
+            $('.birthday-image').first().show(1000);
+            setTimeout(function () {
+                $('.birthday-image').hide();
+                $('.birthday-image').last().show(1000);
+                setTimeout(function () {
+                    $('.birthday-image').hide(1000);
+                }, 3000);
+            }, 3000)
+        }, 2000);
+    }, 2000);
+}
+
+function pauseSound() {
+    createjs.Sound.stop(soundID);
+}
+
+function hideBirthDay() {
+    pauseSound();
+    $('.birthday-container').remove();
+}
