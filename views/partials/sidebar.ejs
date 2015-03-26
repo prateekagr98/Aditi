@@ -9,20 +9,35 @@
 			<a href="/oilPaintings" class="sidebar-item pink">Oil Paintings</a>
 		<% } %>
 
-		<% if(typeof page !== 'undefined' && page === 'marble-art'){ %>
-			<a href="/marbleArt" class="sidebar-item dark-orange" style="border-right-color: #FFB54E">Marble Art</a>
+		<% if(typeof page !== 'undefined' && page === 'portraits'){ %>
+			<a href="/portraits" class="sidebar-item dark-orange" style="border-right-color: #FFB54E">Portraits</a>
 		<% } else { %>
-			<a href="/marbleArt" class="sidebar-item dark-orange">Marble Art</a>
+			<a href="/portraits" class="sidebar-item dark-orange">Portraits</a>
 		<% } %>
 
 		<% if(typeof page !== 'undefined' && page === 'custom-gifts'){ %>
-			<a href="" class="sidebar-item purple" style="border-right-color: #A05FEF">Customized Gifts</a>
+			<a href="customGifts" class="sidebar-item purple" style="border-right-color: #A05FEF">Customized Gifts</a>
 		<% } else { %>	
-			<a href="" class="sidebar-item purple">Customized Gifts</a>
+			<a href="customGifts" class="sidebar-item purple">Customized Gifts</a>
 		<% } %>
 
-		<a href="" class="sidebar-item green">Blog</a>
-		<a href="" class="sidebar-item orange">About</a>
-		<a href="" class="sidebar-item blue">Contact</a>
+		<% if(typeof page !== 'undefined' && page === 'media'){ %>
+			<a href="/media" class="sidebar-item green" style="border-right-color: #BBD302">Media</a>
+		<% } else { %>
+			<a href="/media" class="sidebar-item green">Media</a>
+		<% } %>
+
+		<% if(typeof page !== 'undefined' && page === 'about'){ %>
+			<a href="/about" class="sidebar-item orange" style="border-right-color: #FFB54E">About</a>
+		<% } else { %>
+			<a href="/about" class="sidebar-item orange">About</a>
+		<% } %>
+
+
+		<% if(typeof page !== 'undefined' && page === 'contact'){ %>
+			<a href="/contact" class="sidebar-item blue" style="border-right-color: #83C3F1">Contact</a>
+		<% } else { %>
+			<a href="/contact" class="sidebar-item blue">Contact</a>
+		<% } %>
 	</div>
 </div>

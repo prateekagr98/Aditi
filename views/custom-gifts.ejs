@@ -1,0 +1,25 @@
+<!Doctype html>
+<html>
+	<head>
+		<title>Custom Gifts | Artist Aditi</title>
+		<link rel="stylesheet" href="/stylesheets/style.css" />
+
+		<script type="text/javascript" src="/javascripts/jquery-1.11.2.min.js"></script>
+		<script type="text/javascript" src="/javascripts/script.js"></script>
+	</head>
+	<body>
+		<div class="main-container">
+			<% include ./partials/sidebar %>
+			<div class="content-area">
+				<div class="custom-gifts">
+					<% for(var i=0; i< imageSet.length; i++) { %>
+						<div class="custom-gifts-item">
+							<img src="<%= imageSet[i] %>" />
+						</div>
+					<% } %>
+				</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+	</body>
+</html>

@@ -49,8 +49,6 @@ Sidebar
 	margin: auto;
 	width: 130px;
 	height: 130px;
-	border-radius: 100%;
-	background-color: #3FA9F5;
 	margin-bottom: 30px;
 }
 
@@ -190,17 +188,17 @@ Homepage Slider
 
 /*
 ==========================================
-Marble Art
+Portraits
 ==========================================
 */
 
-.marble-art{
+.portraits{
 	position: absolute;
 	width: 100%;
 	height: 100%;
 }
 
-.marble-art-item{
+.portraits-item{
 	position: relative;
 	float: left;
 	width: 50%;
@@ -212,11 +210,33 @@ Marble Art
   	box-sizing: border-box;         /* Safari 5.1+, Chrome 10+, Firefox 29+, Opera 7+, IE 8+, Android 4.0+, iOS any */
 }
 
-.marble-art-item img{
+.portraits-item img{
 	position: absolute;
 	top: 0px; left: 0px;
 	width: 100%;
+	min-height: 100%;
 	overflow: hidden;
+
+	-webkit-transition-property: width, min-height, left, top;
+    -moz-transition-property: width, min-height, left, top;
+    -o-transition-property: width, min-height, left, top;
+    ransition-property: width, min-height, left, top;
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    -webkit-transition-timing-function: ease-in-out;
+    -moz-transition-timing-function: ease-in-out;
+    -o-transition-timing-function: ease-in-out;
+    transition-timing-function: ease-in-out;
+}
+
+.portraits-item img:hover{
+	cursor: pointer;
+	z-index: 200;
+	width: 110%;
+	left: -50px;
+	top: -30px;
 }
 
 /*
@@ -266,6 +286,60 @@ Oil Paintings
 }
 
 .oil-paintings-item img:hover{
+	cursor: pointer;
+	z-index: 200;
+	width: 110%;
+	left: -50px;
+	top: -30px;
+}
+
+/*
+============================================
+Custom Gifts
+============================================
+*/
+
+.custom-gifts{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+.custom-gifts-item{
+	position: relative;
+	float: left;
+	width: 50%;
+	height: 50%;
+	border: 5px solid #EEEEEE;
+	border-left : 0px;
+
+	-webkit-box-sizing: border-box; /* Safari 3.0 - 5.0, Chrome 1 - 9, Android 2.1 - 3.x */
+ 	-moz-box-sizing: border-box;    /* Firefox 1 - 28 */
+  	box-sizing: border-box;         /* Safari 5.1+, Chrome 10+, Firefox 29+, Opera 7+, IE 8+, Android 4.0+, iOS any */
+}
+
+.custom-gifts-item img{
+	position: absolute;
+	top: 0px; left: 0px;
+	width: 100%;
+	min-height: 100%;
+	overflow: hidden;
+
+	-webkit-transition-property: width, min-height, left, top;
+    -moz-transition-property: width, min-height, left, top;
+    -o-transition-property: width, min-height, left, top;
+    ransition-property: width, min-height, left, top;
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    -webkit-transition-timing-function: ease-in-out;
+    -moz-transition-timing-function: ease-in-out;
+    -o-transition-timing-function: ease-in-out;
+    transition-timing-function: ease-in-out;
+}
+
+.custom-gifts-item img:hover{
 	cursor: pointer;
 	z-index: 200;
 	width: 110%;
