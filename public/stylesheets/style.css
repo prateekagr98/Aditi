@@ -266,6 +266,7 @@ Oil Paintings
 }
 
 .oil-paintings-item img:hover{
+	cursor: pointer;
 	z-index: 200;
 	width: 110%;
 	left: -50px;
