@@ -3,12 +3,11 @@
 	<head>
 		<title>Custom Gifts | Artist Aditi</title>
 		<link rel="stylesheet" href="/stylesheets/style.css" />
+		<link rel="stylesheet" href="/stylesheets/jquery.lightbox.min.css" />
 
 		<script type="text/javascript" src="/javascripts/jquery-1.11.2.min.js"></script>
+		<script type="text/javascript" src="/javascripts/jquery.lightbox.min.js"></script>
 		<script type="text/javascript" src="/javascripts/script.js"></script>
-		<script>
-
-		</script>
 	</head>
 	<body>
 		<div class="main-container">
@@ -17,7 +16,9 @@
 				<div class="custom-gifts">
 					<% for(var i=0; i< imageSet.length; i++) { %>
 						<div class="custom-gifts-item">
-							<img src="<%= imageSet[i] %>" class="cutom-gifts-image" />
+							<a href="<%= imageSet[i] %>" rel="lightbox">
+								<img src="<%= imageSet[i] %>" />
+							</a>
 						</div>
 					<% } %>
 				</div>

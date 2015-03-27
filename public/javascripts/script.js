@@ -1,6 +1,7 @@
 (function () {
 
     $(document).ready(function () {
+        $('[rel="lightbox"]').lightbox();
         var slider = new Slider(4000);
         slider.start();
         loadSound();
