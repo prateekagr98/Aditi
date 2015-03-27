@@ -359,3 +359,51 @@ Birthday CSS
 .close:hover{
 	cursor: pointer;
 }
+
+/*
+============================================
+Contact Form
+============================================
+*/
+
+.contact-form{
+	margin-left: 50px;
+	width: 370px;
+	height: 330px;
+}
+
+.contact-heading{
+	margin-top: 120px;
+	margin-left: 50px;
+	color: #37A5F4;
+	font: 30px "Lucida Grande",Helvetica,Arial,sans-serif;
+}
+
+.contact-form input, .contact-form textarea{
+	margin-bottom: 20px;
+	display: block;
+	border: none;
+	border-radius: 3px;
+	padding: 15px 10px;
+	width: 350px;
+	font: 14px "Lucida Grande",Helvetica,Arial,sans-serif;
+	color: #424242;
+}
+
+.contact-form textarea{
+	height: 100px;
+}
+
+.contact-form button{
+	float: right;
+	border: none;
+	border-radius: 3px;
+	padding: 10px 20px;
+	font-size: 14px;
+	color: #424242;
+	background-color: #FAFAFA;
+}
+
+.contact-form button:hover{
+	cursor: pointer;
+}

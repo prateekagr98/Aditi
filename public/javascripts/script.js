@@ -1,7 +1,10 @@
 (function () {
 
     $(document).ready(function () {
-        $('[rel="lightbox"]').lightbox();
+        if ($('[rel="lightbox"]').length) {
+            $('[rel="lightbox"]').lightbox();
+        }
+
         var slider = new Slider(4000);
         slider.start();
         loadSound();
