@@ -407,3 +407,31 @@ Contact Form
 .contact-form button:hover{
 	cursor: pointer;
 }
+
+/*
+============================================
+About Page
+============================================
+*/
+
+.fb-icon{
+	position: absolute;
+	width: 40px;
+	top: 20px;
+	right: 30px;
+	border-radius: 100%;
+}
+
+.about-heading{
+	text-align: center;
+	margin-top: 120px;
+	margin-left: 50px;
+	color: #FFB54E;
+	font: 30px "Lucida Grande",Helvetica,Arial,sans-serif;
+}
+
+.about-image{
+	margin: auto;
+	display: block;
+	width: 500px;
+}
