@@ -7,14 +7,17 @@
 
         var slider = new Slider(4000);
         slider.start();
-        loadSound();
-        $('.birthday-container').on('click', function () {
-            pauseSound();
-        });
 
-        $('.close').on('click', function () {
-            hideBirthDay();
-        });
+        if (typeof createjs !== 'undefined') {
+            loadSound();
+            $('.birthday-container').on('click', function () {
+                pauseSound();
+            });
+
+            $('.close').on('click', function () {
+                hideBirthDay();
+            });
+        }
     });
 
     function Slider(timeInterval) {

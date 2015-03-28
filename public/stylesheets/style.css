@@ -151,7 +151,7 @@ Homepage Slider
 	position: absolute;
     width: 100%;
     height: 5px;
-    background-color: #3FA9F5;
+    background-color: #CCCCCC;
 
     -webkit-animation-name: progress-bar; /* Chrome, Safari, Opera */
     -webkit-animation-duration: 3s; /* Chrome, Safari, Opera */
@@ -190,21 +190,26 @@ Homepage Slider
 	height: 100%;
 	background-repeat: no-repeat;
 	background-size: cover;
+	border: 5px solid #F6F6F6;
+
+	-webkit-box-sizing: border-box; /* Safari 3.0 - 5.0, Chrome 1 - 9, Android 2.1 - 3.x */
+ 	-moz-box-sizing: border-box;    /* Firefox 1 - 28 */
+  	box-sizing: border-box;         /* Safari 5.1+, Chrome 10+, Firefox 29+, Opera 7+, IE 8+, Android 4.0+, iOS any */
 }
 
 /*
 ==========================================
-Portraits
+Image Slider
 ==========================================
 */
 
-.portraits{
+.slider-container{
 	position: absolute;
 	width: 100%;
 	height: 100%;
 }
 
-.portraits-item{
+.slider-container-item{
 	position: relative;
 	float: left;
 	width: 50%;
@@ -216,7 +221,7 @@ Portraits
   	box-sizing: border-box;         /* Safari 5.1+, Chrome 10+, Firefox 29+, Opera 7+, IE 8+, Android 4.0+, iOS any */
 }
 
-.portraits-item img{
+.slider-container-item img{
 	position: absolute;
 	top: 0px; left: 0px;
 	right: 0px; bottom: 0px;
@@ -229,89 +234,7 @@ Portraits
 	box-shadow: 10px 10px 5px #CCCCCC;
 }
 
-.portraits-item img:hover{
-	cursor: pointer;
-}
-
-/*
-============================================
-Oil Paintings
-============================================
-*/
-
-.oil-paintings{
-	position: absolute;
-	width: 100%;
-	height: 100%;
-}
-
-.oil-paintings-item{
-	position: relative;
-	float: left;
-	width: 50%;
-	height: 430px;
-	margin-top: 30px;
-
-	-webkit-box-sizing: border-box; /* Safari 3.0 - 5.0, Chrome 1 - 9, Android 2.1 - 3.x */
- 	-moz-box-sizing: border-box;    /* Firefox 1 - 28 */
-  	box-sizing: border-box;         /* Safari 5.1+, Chrome 10+, Firefox 29+, Opera 7+, IE 8+, Android 4.0+, iOS any */
-}
-
-.oil-paintings-item img{
-	position: absolute;
-	top: 0px; left: 0px;
-	right: 0px; bottom: 0px;
-	margin: auto;
-	max-width: 380px;
-	height: 380px;
-	overflow: hidden;
-	border: 10px solid #FFFFFF;
-	border-radius: 6px;
-	box-shadow: 10px 10px 5px #CCCCCC;
-}
-
-.oil-paintings-item img:hover{
-	cursor: pointer;
-}
-
-/*
-============================================
-Custom Gifts
-============================================
-*/
-
-.custom-gifts{
-	position: absolute;
-	width: 100%;
-	height: 100%;
-}
-
-.custom-gifts-item{
-	position: relative;
-	float: left;
-	width: 50%;
-	height: 430px;
-	margin-top: 30px;
-
-	-webkit-box-sizing: border-box; /* Safari 3.0 - 5.0, Chrome 1 - 9, Android 2.1 - 3.x */
- 	-moz-box-sizing: border-box;    /* Firefox 1 - 28 */
-  	box-sizing: border-box;         /* Safari 5.1+, Chrome 10+, Firefox 29+, Opera 7+, IE 8+, Android 4.0+, iOS any */
-}
-
-.custom-gifts-item img{
-	position: absolute;
-	top: 0px; left: 0px;
-	right: 0px; bottom: 0px;
-	margin: auto;
-	max-width: 380px;
-	height: 380px;
-	overflow: hidden;
-	border: 10px solid #FFFFFF;
-	border-radius: 6px;
-	box-shadow: 10px 10px 5px #CCCCCC;
-}
-
-.custom-gifts-item img:hover{
+.slider-container-item img:hover{
 	cursor: pointer;
 }
 
