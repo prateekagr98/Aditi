@@ -5,9 +5,18 @@
 		<link rel="stylesheet" href="/stylesheets/style.css" />
 
 		<script type="text/javascript" src="/javascripts/jquery-1.11.2.min.js"></script>
+		<script type="text/javascript" src="/javascripts/paper-full.min.js"></script>
+		<script type="text/paperscript" src="/javascripts/ball.js" canvas="myCanvas"></script>
+		<script src="https://code.createjs.com/soundjs-0.6.0.min.js"></script>
 		<script type="text/javascript" src="/javascripts/script.js"></script>
 	</head>
 	<body>
+		<div class="birthday-container">
+			<canvas id="myCanvas"></canvas>
+			<img class="birthday-image" src="/images/birthday1.jpg" />
+			<img class="birthday-image" src="/images/birthday2.jpg" />
+			<img class="close" src="/images/close.png" />
+		</div>
 		<div class="main-container">
 			<% include ./partials/sidebar %>
 			<div class="content-area">

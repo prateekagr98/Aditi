@@ -3,7 +3,7 @@ body {
 	margin: 0px;
 	border: 0px;
   	font: 14px 'Lucida Grande', Helvetica, Arial, sans-serif;
-  	background-color: #EEEEEE;
+  	background-color: #F6F6F6;
 }
 
 a {
@@ -35,8 +35,8 @@ Sidebar
 	padding-top: 60px;
 	width: 300px;
 	height: 100%;
-	background-color: #000000;
-	color: #FFFFFF !important;
+	background-color: #FFFFFF;
+	color: #000000 !important;
 	border-right: 1px solid #EEEEEE;
 
 	-webkit-box-sizing: border-box; /* Safari 3.0 - 5.0, Chrome 1 - 9, Android 2.1 - 3.x */
@@ -68,9 +68,9 @@ Sidebar
 	padding: 9px;
 	text-align: center;
 	text-transform: uppercase;
-	border-right: 5px solid #000000;
+	border-right: 5px solid #FFFFFF;
 	border-bottom: 1px solid #EEEEEE;
-	color: #FFFFFF;
+	color: #000000;
 
 	-webkit-transition-property: background-color, border-right-color, color;
     -moz-transition-property: background-color, border-right-color, color;
@@ -97,26 +97,32 @@ Sidebar
 }
 
 .pink:hover{
+	color: #F995F4;
 	border-right-color: #F995F4;
 }
 
 .dark-orange:hover{
+	color: #EF6E15;
 	border-right-color: #EF6E15;
 }
 
 .purple:hover{
+	color: #A05FEF;
 	border-right-color: #A05FEF;
 }
 
 .green:hover{
+	color: #BBD302;
 	border-right-color: #BBD302;
 }
 
 .orange:hover{
+	color: #FFB54E;
 	border-right-color: #FFB54E;
 }
 
 .blue:hover{
+	color: #83C3F1;
 	border-right-color: #83C3F1;
 }
 
@@ -145,7 +151,7 @@ Homepage Slider
 	position: absolute;
     width: 100%;
     height: 5px;
-    background-color: #3FA9F5;
+    background-color: #CCCCCC;
 
     -webkit-animation-name: progress-bar; /* Chrome, Safari, Opera */
     -webkit-animation-duration: 3s; /* Chrome, Safari, Opera */
@@ -184,165 +190,172 @@ Homepage Slider
 	height: 100%;
 	background-repeat: no-repeat;
 	background-size: cover;
+	border: 5px solid #F6F6F6;
+
+	-webkit-box-sizing: border-box; /* Safari 3.0 - 5.0, Chrome 1 - 9, Android 2.1 - 3.x */
+ 	-moz-box-sizing: border-box;    /* Firefox 1 - 28 */
+  	box-sizing: border-box;         /* Safari 5.1+, Chrome 10+, Firefox 29+, Opera 7+, IE 8+, Android 4.0+, iOS any */
 }
 
 /*
 ==========================================
-Portraits
+Image Slider
 ==========================================
 */
 
-.portraits{
+.slider-container{
 	position: absolute;
 	width: 100%;
 	height: 100%;
 }
 
-.portraits-item{
+.slider-container-item{
 	position: relative;
 	float: left;
 	width: 50%;
-	height: 50%;
-	border: 2px solid #EEEEEE;
+	height: 430px;
+	margin-top: 30px;
 
 	-webkit-box-sizing: border-box; /* Safari 3.0 - 5.0, Chrome 1 - 9, Android 2.1 - 3.x */
  	-moz-box-sizing: border-box;    /* Firefox 1 - 28 */
   	box-sizing: border-box;         /* Safari 5.1+, Chrome 10+, Firefox 29+, Opera 7+, IE 8+, Android 4.0+, iOS any */
 }
 
-.portraits-item img{
+.slider-container-item img{
 	position: absolute;
 	top: 0px; left: 0px;
-	width: 100%;
-	min-height: 100%;
+	right: 0px; bottom: 0px;
+	margin: auto;
+	max-width: 380px;
+	height: 380px;
 	overflow: hidden;
-
-	-webkit-transition-property: width, min-height, left, top;
-    -moz-transition-property: width, min-height, left, top;
-    -o-transition-property: width, min-height, left, top;
-    ransition-property: width, min-height, left, top;
-    -webkit-transition-duration: 0.5s;
-    -moz-transition-duration: 0.5s;
-    -o-transition-duration: 0.5s;
-    transition-duration: 0.5s;
-    -webkit-transition-timing-function: ease-in-out;
-    -moz-transition-timing-function: ease-in-out;
-    -o-transition-timing-function: ease-in-out;
-    transition-timing-function: ease-in-out;
+	border: 10px solid #FFFFFF;
+	border-radius: 6px;
+	box-shadow: 10px 10px 5px #CCCCCC;
 }
 
-.portraits-item img:hover{
+.slider-container-item img:hover{
 	cursor: pointer;
-	z-index: 200;
-	width: 110%;
-	left: -50px;
-	top: -30px;
+}
+
+/*
+==============================================
+Birthday CSS
+==============================================
+*/
+
+.birthday-container{
+	z-index: 500;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	background: #FFFFFF url('../images/birthday.jpg') no-repeat center;
+	background-size: auto 100%;
+}
+
+#myCanvas{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+}
+
+.birthday-image{
+	position: absolute;
+	width: 100%;
+	overflow: hidden;
+	z-index: 10;
+}
+
+.close{
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	width: 30px;
+	height: 30px;
+	z-index: 400;
+}
+
+.close:hover{
+	cursor: pointer;
 }
 
 /*
 ============================================
-Oil Paintings
+Contact Form
 ============================================
 */
 
-.oil-paintings{
-	position: absolute;
-	width: 100%;
-	height: 100%;
+.contact-form{
+	margin-left: 50px;
+	width: 370px;
+	height: 330px;
 }
 
-.oil-paintings-item{
-	position: relative;
-	float: left;
-	width: 50%;
-	height: 50%;
-	border: 5px solid #EEEEEE;
-	border-left : 0px;
-
-	-webkit-box-sizing: border-box; /* Safari 3.0 - 5.0, Chrome 1 - 9, Android 2.1 - 3.x */
- 	-moz-box-sizing: border-box;    /* Firefox 1 - 28 */
-  	box-sizing: border-box;         /* Safari 5.1+, Chrome 10+, Firefox 29+, Opera 7+, IE 8+, Android 4.0+, iOS any */
+.contact-heading{
+	margin-top: 120px;
+	margin-left: 50px;
+	color: #37A5F4;
+	font: 30px "Lucida Grande",Helvetica,Arial,sans-serif;
 }
 
-.oil-paintings-item img{
-	position: absolute;
-	top: 0px; left: 0px;
-	width: 100%;
-	min-height: 100%;
-	overflow: hidden;
-
-	-webkit-transition-property: width, min-height, left, top;
-    -moz-transition-property: width, min-height, left, top;
-    -o-transition-property: width, min-height, left, top;
-    ransition-property: width, min-height, left, top;
-    -webkit-transition-duration: 0.5s;
-    -moz-transition-duration: 0.5s;
-    -o-transition-duration: 0.5s;
-    transition-duration: 0.5s;
-    -webkit-transition-timing-function: ease-in-out;
-    -moz-transition-timing-function: ease-in-out;
-    -o-transition-timing-function: ease-in-out;
-    transition-timing-function: ease-in-out;
+.contact-form input, .contact-form textarea{
+	margin-bottom: 20px;
+	display: block;
+	border: none;
+	border-radius: 3px;
+	padding: 15px 10px;
+	width: 350px;
+	font: 14px "Lucida Grande",Helvetica,Arial,sans-serif;
+	color: #424242;
 }
 
-.oil-paintings-item img:hover{
+.contact-form textarea{
+	height: 100px;
+}
+
+.contact-form button{
+	float: right;
+	border: none;
+	border-radius: 3px;
+	padding: 10px 20px;
+	font-size: 14px;
+	color: #424242;
+	background-color: #FAFAFA;
+}
+
+.contact-form button:hover{
 	cursor: pointer;
-	z-index: 200;
-	width: 110%;
-	left: -50px;
-	top: -30px;
 }
 
 /*
 ============================================
-Custom Gifts
+About Page
 ============================================
 */
 
-.custom-gifts{
+.fb-icon{
 	position: absolute;
-	width: 100%;
-	height: 100%;
+	width: 40px;
+	top: 20px;
+	right: 30px;
+	border-radius: 100%;
 }
 
-.custom-gifts-item{
-	position: relative;
-	float: left;
-	width: 50%;
-	height: 50%;
-	border: 5px solid #EEEEEE;
-	border-left : 0px;
-
-	-webkit-box-sizing: border-box; /* Safari 3.0 - 5.0, Chrome 1 - 9, Android 2.1 - 3.x */
- 	-moz-box-sizing: border-box;    /* Firefox 1 - 28 */
-  	box-sizing: border-box;         /* Safari 5.1+, Chrome 10+, Firefox 29+, Opera 7+, IE 8+, Android 4.0+, iOS any */
+.about-heading{
+	text-align: center;
+	margin-top: 110px;
+	margin-left: 50px;
+	padding-bottom: 10px;
+	color: #FFB54E;
+	font: 30px "Lucida Grande",Helvetica,Arial,sans-serif;
 }
 
-.custom-gifts-item img{
-	position: absolute;
-	top: 0px; left: 0px;
-	width: 100%;
-	min-height: 100%;
-	overflow: hidden;
-
-	-webkit-transition-property: width, min-height, left, top;
-    -moz-transition-property: width, min-height, left, top;
-    -o-transition-property: width, min-height, left, top;
-    ransition-property: width, min-height, left, top;
-    -webkit-transition-duration: 0.5s;
-    -moz-transition-duration: 0.5s;
-    -o-transition-duration: 0.5s;
-    transition-duration: 0.5s;
-    -webkit-transition-timing-function: ease-in-out;
-    -moz-transition-timing-function: ease-in-out;
-    -o-transition-timing-function: ease-in-out;
-    transition-timing-function: ease-in-out;
-}
-
-.custom-gifts-item img:hover{
-	cursor: pointer;
-	z-index: 200;
-	width: 110%;
-	left: -50px;
-	top: -30px;
+.about-image{
+	margin: auto;
+	display: block;
+	width: 500px;
 }
