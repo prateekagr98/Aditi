@@ -1,7 +1,7 @@
 <!Doctype html>
 <html>
 	<head>
-		<title>Oil Paintings | Artist Aditi</title>
+		<title>Contact | Artist Aditi</title>
 		<link rel="stylesheet" href="/stylesheets/style.css" />
 
 		<script type="text/javascript" src="/javascripts/jquery-1.11.2.min.js"></script>
@@ -12,7 +12,14 @@
 			<% include ./partials/sidebar %>
 			<div class="content-area">
 				<h2 class="contact-heading">Contact Me</h2>
-				<form class="contact-form">
+				<% if(typeof message !== 'undefined'){ %>
+					<% if(success){ %>
+						<p class="contact-message" style="color: #4CAF50;"><%= message %></p>
+					<% } else { %>
+						<p class="contact-message" style="color: #F44336;"><%= message %></p>
+					<% } %>
+				<% } %>
+				<form class="contact-form" action="/sendEmail" method="POST">
 					<input type="name" name="name" placeholder="Enter your name.." />
 					<input type="email" name="email" placeholder="Enter your email.."/>
 					<textarea name="message" placeholder="Write your message.."></textarea>

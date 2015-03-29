@@ -80,4 +80,8 @@ router.get('/contact', function (req, res, next) {
     });
 });
 
+router.post('/sendEmail', function (req, res, next) {
+
+});
+
 module.exports = router;

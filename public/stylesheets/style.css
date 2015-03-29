@@ -331,6 +331,10 @@ Contact Form
 	cursor: pointer;
 }
 
+.contact-message{
+	margin-left: 50px;
+}
+
 /*
 ============================================
 About Page
