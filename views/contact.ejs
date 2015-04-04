@@ -13,7 +13,7 @@
 			<div class="content-area">
 				<h2 class="contact-heading">Contact Me</h2>
 				<% if(typeof message !== 'undefined'){ %>
-					<% if(success){ %>
+					<% if(success === 'true'){ %>
 						<p class="contact-message" style="color: #4CAF50;"><%= message %></p>
 					<% } else { %>
 						<p class="contact-message" style="color: #F44336;"><%= message %></p>

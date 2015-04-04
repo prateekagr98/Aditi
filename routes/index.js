@@ -1,7 +1,8 @@
 var express = require('express'),
     router = express.Router(),
     _ = require('underscore'),
-    glob = require('glob');
+    glob = require('glob'),
+    ContactModel = require('../models/ContactModel');
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
@@ -75,13 +76,43 @@ router.get('/about', function (req, res, next) {
 });
 
 router.get('/contact', function (req, res, next) {
+    var success, message;
+
+    if (req.query && req.query.success) {
+        success = req.query.success
+    }
+
+    if (success === 'true') {
+        message = 'Your query has been successfully sent to Aditi Mittal.'
+    } else {
+        if (success === 'false') {
+            message = 'Oops! Your request was not saved. Please try again after some time';
+        }
+    }
+
     res.render('contact', {
-        page: 'contact'
+        page: 'contact',
+        message: message,
+        success: success
     });
 });
 
 router.post('/sendEmail', function (req, res, next) {
 
+    var newForm = new ContactModel({
+        name: req.body.name,
+        email: req.body.email,
+        message: req.body.message
+    });
+
+    newForm.save(function (err, newForm) {
+        if (err) {
+            res.redirect('/contact?success=false');
+            return;
+        }
+
+        res.redirect('/contact?success=true');
+    });
 });
 
 module.exports = router;
