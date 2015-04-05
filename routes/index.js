@@ -115,4 +115,17 @@ router.post('/sendEmail', function (req, res, next) {
     });
 });
 
+router.get('/viewContacts', function (req, res, next) {
+    ContactModel.find({}, function (err, mails) {
+        if (err) {
+            console.log(error);
+            return;
+        }
+
+        res.render('viewContacts', {
+            mails: mails
+        });
+    });
+});
+
 module.exports = router;

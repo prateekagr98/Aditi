@@ -318,3 +318,27 @@ About Page
 	display: block;
 	width: 500px;
 }
+
+
+/*
+============================================
+View Contact
+============================================
+*/
+.viewContact-item{
+	margin: auto;
+	margin-top: 30px;
+	width: 990px;
+	padding: 5px;
+	padding-left: 25px;
+	background: #F8F8F8;
+	border-radius: 6px;
+}
+
+.name{
+	color: #83C3F1;
+}
+
+.message{
+	font-size: 13px;
+}
