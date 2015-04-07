@@ -81,6 +81,7 @@ a {
 	display: inline-block;
 	font-size: 15px;
 	color: #1C1C1C;
+	background-color: #EEEEEE;
 	padding: 8px 16px;
 	margin-bottom: 10px;
 	border:none;
@@ -137,5 +138,6 @@ Login CSS
 
 .login-container input:focus{
 	box-shadow: none;
+	outline:none;
 	border-bottom: 2px solid #83C3F1;
 }
