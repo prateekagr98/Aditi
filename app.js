@@ -4,10 +4,49 @@ var express = require('express'),
     logger = require('morgan'),
     cookieParser = require('cookie-parser'),
     bodyParser = require('body-parser'),
-    mongoose = require('mongoose');
+    mongoose = require('mongoose'),
+    passport = require('passport'),
+    session = require('express-session'),
+    LocalStrategy = require('passport-local').Strategy,
+    AdminModel = require('./models/AdminModel');;
+
+passport.use(new LocalStrategy(
+    function (username, password, done) {
+        AdminModel.findOne({
+            username: username
+        }, function (err, admin) {
+            if (err) {
+                return done(err);
+            }
+
+            if (!admin) {
+                return done(null, false, {
+                    message: 'Incorrect username.'
+                });
+            }
+            if (!admin.validPassword(password)) {
+                return done(null, false, {
+                    message: 'Incorrect password.'
+                });
+            }
+            return done(null, admin);
+        });
+    }
+));
+
+passport.serializeUser(function (admin, done) {
+    done(null, admin._id);
+});
+
+passport.deserializeUser(function (id, done) {
+    AdminModel.findById(id, function (err, admin) {
+        done(err, admin);
+    });
+});
 
 var routes = require('./routes/index'),
-    users = require('./routes/users');
+    users = require('./routes/users'),
+    admin = require('./routes/admin');
 
 var app = express();
 
@@ -39,10 +78,18 @@ app.use(bodyParser.urlencoded({
     extended: false
 }));
 app.use(cookieParser());
+app.use(session({
+    secret: 'keyboard cat',
+    resave: false,
+    saveUninitialized: true
+}));
+app.use(passport.initialize());
+app.use(passport.session());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 app.use('/users', users);
+app.use('/admin', admin);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

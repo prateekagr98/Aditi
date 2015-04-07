@@ -1,61 +1,26 @@
 0 info it worked if it ends with ok
-1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', 'express-mailer' ]
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'start' ]
 2 info using npm@1.4.28
 3 info using node@v0.10.36
-4 verbose readDependencies using package.json deps
-5 verbose cache add [ 'express-mailer', null ]
-6 verbose cache add name=undefined spec="express-mailer" args=["express-mailer",null]
-7 verbose parsed url { protocol: null,
-7 verbose parsed url   slashes: null,
-7 verbose parsed url   auth: null,
-7 verbose parsed url   host: null,
-7 verbose parsed url   port: null,
-7 verbose parsed url   hostname: null,
-7 verbose parsed url   hash: null,
-7 verbose parsed url   search: null,
-7 verbose parsed url   query: null,
-7 verbose parsed url   pathname: 'express-mailer',
-7 verbose parsed url   path: 'express-mailer',
-7 verbose parsed url   href: 'express-mailer' }
-8 silly lockFile d15da727-express-mailer express-mailer
-9 verbose lock express-mailer /Users/prateek/.npm/d15da727-express-mailer.lock
-10 silly lockFile d15da727-express-mailer express-mailer
-11 silly lockFile d15da727-express-mailer express-mailer
-12 verbose addNamed [ 'express-mailer', '' ]
-13 verbose addNamed [ null, '*' ]
-14 silly lockFile fa9c0105-express-mailer express-mailer@
-15 verbose lock express-mailer@ /Users/prateek/.npm/fa9c0105-express-mailer.lock
-16 silly addNameRange { name: 'express-mailer', range: '*', hasData: false }
-17 verbose request where is /express-mailer
-18 verbose request registry https://registry.npmjs.org/
-19 verbose request id 3703565d389d5553
-20 verbose url raw /express-mailer
-21 verbose url resolving [ 'https://registry.npmjs.org/', './express-mailer' ]
-22 verbose url resolved https://registry.npmjs.org/express-mailer
-23 verbose request where is https://registry.npmjs.org/express-mailer
-24 info trying registry request attempt 1 at 22:56:16
-25 http GET https://registry.npmjs.org/express-mailer
-26 info retry will retry, error on last attempt: Error: getaddrinfo ENOTFOUND
-27 info trying registry request attempt 2 at 22:56:26
-28 http GET https://registry.npmjs.org/express-mailer
-29 info retry will retry, error on last attempt: Error: getaddrinfo ENOTFOUND
-30 info trying registry request attempt 3 at 22:57:26
-31 http GET https://registry.npmjs.org/express-mailer
-32 silly lockFile fa9c0105-express-mailer express-mailer@
-33 silly lockFile fa9c0105-express-mailer express-mailer@
-34 error network getaddrinfo ENOTFOUND
-34 error network This is most likely not a problem with npm itself
-34 error network and is related to network connectivity.
-34 error network In most cases you are behind a proxy or have bad network settings.
-34 error network
-34 error network If you are behind a proxy, please make sure that the
-34 error network 'proxy' config is set properly.  See: 'npm help config'
-35 error System Darwin 14.1.0
-36 error command "node" "/usr/local/bin/npm" "install" "express-mailer"
-37 error cwd /Users/prateek/Work/Free_Lancing/Aditi
-38 error node -v v0.10.36
-39 error npm -v 1.4.28
-40 error syscall getaddrinfo
-41 error code ENOTFOUND
-42 error errno ENOTFOUND
-43 verbose exit [ 1, true ]
+4 verbose run-script [ 'prestart', 'start', 'poststart' ]
+5 info prestart Aditi@0.0.0
+6 info start Aditi@0.0.0
+7 verbose unsafe-perm in lifecycle true
+8 info Aditi@0.0.0 Failed to exec start script
+9 error Aditi@0.0.0 start: `node ./bin/www`
+9 error Exit status 8
+10 error Failed at the Aditi@0.0.0 start script.
+10 error This is most likely a problem with the Aditi package,
+10 error not with npm itself.
+10 error Tell the author that this fails on your system:
+10 error     node ./bin/www
+10 error You can get their info via:
+10 error     npm owner ls Aditi
+10 error There is likely additional logging output above.
+11 error System Darwin 14.1.0
+12 error command "node" "/usr/local/bin/npm" "start"
+13 error cwd /Users/prateek/Work/Free_Lancing/Aditi
+14 error node -v v0.10.36
+15 error npm -v 1.4.28
+16 error code ELIFECYCLE
+17 verbose exit [ 1, true ]
