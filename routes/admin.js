@@ -40,4 +40,22 @@ router.post('/authenticate', passport.authenticate('local', {
     failureFlash: false
 }));
 
+router.get('/oilPaintings', isAuthenticated, function (req, res, next) {
+    res.render('admin-oilPaintings', {
+        page: 'oil-paintings'
+    });
+});
+
+router.get('/portraits', isAuthenticated, function (req, res, next) {
+    res.render('admin-portraits', {
+        page: 'portraits'
+    });
+});
+
+router.get('/customGifts', isAuthenticated, function (req, res, next) {
+    res.render('admin-customGifts', {
+        page: 'custom-gifts'
+    });
+});
+
 module.exports = router;
