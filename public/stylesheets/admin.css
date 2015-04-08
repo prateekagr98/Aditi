@@ -216,7 +216,7 @@ Content Area
 .slider-container-item{
 	display: inline-block;
 	margin: 30px;
-	box-shadow: 10px 10px 5px #CCCCCC;
+	box-shadow: 10px 10px 5px rgba(204, 204, 204, 0.5);
 }
 
 .slider-container-item img{
