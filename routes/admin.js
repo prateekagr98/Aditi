@@ -80,4 +80,9 @@ router.get('/customGifts', isAuthenticated, function (req, res, next) {
     });
 });
 
+router.post('/deleteImages', isAuthenticated, function (req, res, next) {
+    res.set('Content-Type', 'application/json');
+    res.send(JSON.stringify({}));
+});
+
 module.exports = router;

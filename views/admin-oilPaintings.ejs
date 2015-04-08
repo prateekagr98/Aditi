@@ -8,12 +8,16 @@
 				background: #F8F8F8;
 			}
 		</style>
+
+		<script type="text/javascript" src="/javascripts/jquery-1.11.2.min.js"></script>
+		<script type="text/javascript" src="/javascripts/admin-script.js"></script>
 	</head>
 	<body>
 		<div class="main-container">
 			<% include ./partials/admin-navigation %>
 			<div class="content-area">
-				<div class="slider-container">
+				<button class="btn btn-orange delete-images float-right" page="<%= page %>">Delete</button>
+				<div class="slider-container" style="clear:both">
 					<% for(var i=0; i< imageSet.length; i++) { %>
 						<div class="slider-container-item">
 								<img src="<%= imageSet[i] %>" />
