@@ -13,7 +13,13 @@
 		<div class="main-container">
 			<% include ./partials/admin-navigation %>
 			<div class="content-area">
-				Custom Gifts Section
+				<div class="slider-container">
+					<% for(var i=0; i< imageSet.length; i++) { %>
+						<div class="slider-container-item">
+								<img src="<%= imageSet[i] %>" />
+						</div>
+					<% } %>
+				</div>
 			</div>
 		</div>
     </body>

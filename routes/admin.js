@@ -1,6 +1,8 @@
 var express = require('express'),
     router = express.Router(),
     passport = require('passport'),
+    _ = require('underscore'),
+    glob = require('glob'),
     AdminModel = require('../models/ContactModel');
 
 function isAuthenticated(req, res, next) {
@@ -41,20 +43,40 @@ router.post('/authenticate', passport.authenticate('local', {
 }));
 
 router.get('/oilPaintings', isAuthenticated, function (req, res, next) {
-    res.render('admin-oilPaintings', {
-        page: 'oil-paintings'
+
+    glob("public/images/oil-paintings/*", null, function (er, imagePaths) {
+        var paths = _.map(imagePaths, function (item) {
+            return item.replace('public', '');
+        });
+
+        res.render('admin-oilPaintings', {
+            page: 'oil-paintings',
+            imageSet: paths
+        });
     });
 });
 
 router.get('/portraits', isAuthenticated, function (req, res, next) {
-    res.render('admin-portraits', {
-        page: 'portraits'
+    glob("public/images/portraits/*", null, function (er, imagePaths) {
+        var paths = _.map(imagePaths, function (item) {
+            return item.replace('public', '');
+        });
+        res.render('admin-portraits', {
+            page: 'portraits',
+            imageSet: paths
+        });
     });
 });
 
 router.get('/customGifts', isAuthenticated, function (req, res, next) {
-    res.render('admin-customGifts', {
-        page: 'custom-gifts'
+    glob("public/images/custom-gifts/*", null, function (er, imagePaths) {
+        var paths = _.map(imagePaths, function (item) {
+            return item.replace('public', '');
+        });
+        res.render('admin-customGifts', {
+            page: 'custom-gifts',
+            imageSet: paths
+        });
     });
 });
 

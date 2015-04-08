@@ -212,3 +212,16 @@ Content Area
 .content-area{
 	margin-top: 50px;
 }
+
+.slider-container-item{
+	display: inline-block;
+	margin: 30px;
+	box-shadow: 10px 10px 5px #CCCCCC;
+}
+
+.slider-container-item img{
+	width: 300px;
+	height: 300px;
+	vertical-align: middle;
+	border-radius: 6px;
+}
