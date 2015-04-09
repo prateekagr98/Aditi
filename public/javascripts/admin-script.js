@@ -9,7 +9,8 @@
             $.ajax({
                 url: '/admin/deleteImages',
                 type: 'POST',
-                data: sendObj,
+                data: JSON.stringify(sendObj),
+                contentType: 'application/json',
                 success: function () {
                     location.reload();
                 }
@@ -44,7 +45,7 @@
     }
 
     DeleteImages.prototype.addToList = function (path) {
-        this.deleteList[path] = true;
+        this.deleteList[path] = path;
     }
 
     DeleteImages.prototype.removeFromList = function (path) {

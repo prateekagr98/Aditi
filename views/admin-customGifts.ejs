@@ -16,7 +16,8 @@
 		<div class="main-container">
 			<% include ./partials/admin-navigation %>
 			<div class="content-area">
-				<div class="slider-container">
+				<button class="btn btn-orange delete-images float-right" page="<%= page %>">Delete</button>
+				<div class="slider-container" style="clear:both">
 					<% for(var i=0; i< imageSet.length; i++) { %>
 						<div class="slider-container-item">
 								<img src="<%= imageSet[i] %>" />

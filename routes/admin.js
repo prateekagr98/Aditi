@@ -3,6 +3,7 @@ var express = require('express'),
     passport = require('passport'),
     _ = require('underscore'),
     glob = require('glob'),
+    del = require('delete'),
     AdminModel = require('../models/ContactModel');
 
 function isAuthenticated(req, res, next) {
@@ -80,7 +81,14 @@ router.get('/customGifts', isAuthenticated, function (req, res, next) {
     });
 });
 
-router.post('/deleteImages', isAuthenticated, function (req, res, next) {
+router.post('/deleteImages', function (req, res, next) {
+    var paths = _.map(req.body.images, function (item) {
+        return 'public' + item;
+    });
+
+    _.each(paths, function (item) {
+        del.sync(item);
+    });
     res.set('Content-Type', 'application/json');
     res.send(JSON.stringify({}));
 });

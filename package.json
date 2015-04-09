@@ -22,5 +22,8 @@
         "passport": "0.2.1",
         "passport-local": "1.0.0",
         "express-session": "1.10.4"
+    },
+    "devDependencies": {
+        "delete": "0.1.5"
     }
 }
