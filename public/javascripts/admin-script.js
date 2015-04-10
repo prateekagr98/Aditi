@@ -1,5 +1,15 @@
 (function () {
-    $('.slider-container-item img').lazyload();
+    $(function () {
+        $(".slider-container-item img").lazyload({
+            event: "sporty"
+        });
+    });
+
+    $(window).bind("load", function () {
+        var timeout = setTimeout(function () {
+            $(".slider-container-item img").trigger("sporty")
+        }, 5000);
+    });
     $(document).ready(function () {
         $('form')[0].reset();
         var deleteImages = new DeleteImages();
