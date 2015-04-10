@@ -21,7 +21,8 @@
         "mongoose": "4.0.1",
         "passport": "0.2.1",
         "passport-local": "1.0.0",
-        "express-session": "1.10.4"
+        "express-session": "1.10.4",
+        "delete": "0.1.5"
     },
     "devDependencies": {
         "delete": "0.1.5"
