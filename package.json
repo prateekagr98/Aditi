@@ -23,6 +23,7 @@
         "passport-local": "1.0.0",
         "express-session": "1.10.4",
         "delete": "0.1.5",
-        "blueimp-file-upload-expressjs": "0.3.2"
+        "blueimp-file-upload-expressjs": "0.3.2",
+        "lazyload": "1.8.4"
     }
 }

@@ -1,4 +1,5 @@
 (function () {
+    $('.slider-container-item img').lazyload();
     $(document).ready(function () {
         $('form')[0].reset();
         var deleteImages = new DeleteImages();
