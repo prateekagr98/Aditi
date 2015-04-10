@@ -1,10 +1,8 @@
 (function () {
-    $(function () {
-        $(".slider-container-item img").lazyload({
-            event: "sporty"
-        });
-    });
 
+    $(".slider-container-item img").lazyload({
+        event: "sporty"
+    });
     $(window).bind("load", function () {
         var timeout = setTimeout(function () {
             $(".slider-container-item img").trigger("sporty")

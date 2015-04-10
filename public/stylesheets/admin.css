@@ -94,6 +94,11 @@ a {
 	color: #FFFFFF;
 }
 
+.btn-red{
+	background: #D32F2F;
+	color: #FFFFFF;
+}
+
 .btn:hover{
 	cursor: pointer;
 }
