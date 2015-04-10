@@ -1,6 +1,10 @@
 (function () {
 
     $(document).ready(function () {
+        $(".slider-container-item > a > img").lazyload({
+            event: "sporty"
+        });
+
         if ($('[rel="lightbox"]').length) {
             $('[rel="lightbox"]').lightbox();
         }

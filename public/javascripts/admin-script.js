@@ -1,14 +1,9 @@
 (function () {
 
-    $(".slider-container-item img").lazyload({
-        event: "sporty"
-    });
-    $(window).bind("load", function () {
-        var timeout = setTimeout(function () {
-            $(".slider-container-item img").trigger("sporty")
-        }, 5000);
-    });
     $(document).ready(function () {
+        $(".slider-container-item img").lazyload({
+            event: "sporty"
+        });
         $('form')[0].reset();
         var deleteImages = new DeleteImages();
         $('.delete-images').on('click', function (e) {
