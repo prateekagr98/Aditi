@@ -1,5 +1,6 @@
 (function () {
     $(document).ready(function () {
+        $('form')[0].reset();
         var deleteImages = new DeleteImages();
         $('.delete-images').on('click', function (e) {
             var sendObj = {

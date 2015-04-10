@@ -17,6 +17,15 @@ function isAuthenticated(req, res, next) {
     res.redirect('/admin/login');
 }
 
+// config the uploader 
+var options = {
+    tmpDir: __dirname + '/../public/images/temp',
+    uploadDir: __dirname + '/../public/images/uploaded',
+    storage: {
+        type: 'local'
+    }
+};
+
 //Admin Login
 router.get('/login', function (req, res, next) {
     if (req.user && req.user._id) {
@@ -91,6 +100,36 @@ router.post('/deleteImages', function (req, res, next) {
     });
     res.set('Content-Type', 'application/json');
     res.send(JSON.stringify({}));
+});
+
+router.post('/upload/oilPaintings', function (req, res) {
+    options.uploadDir = __dirname + '/../public/images/oil-paintings'
+    // init the uploader 
+    var uploader = require('blueimp-file-upload-expressjs')(options);
+    uploader.post(req, res, function (obj) {
+        res.redirect('/admin/oilPaintings');
+    });
+
+});
+
+router.post('/upload/portraits', function (req, res) {
+    options.uploadDir = __dirname + '/../public/images/portraits'
+    // init the uploader 
+    var uploader = require('blueimp-file-upload-expressjs')(options);
+    uploader.post(req, res, function (obj) {
+        res.redirect('/admin/portraits');
+    });
+
+});
+
+router.post('/upload/customGifts', function (req, res) {
+    options.uploadDir = __dirname + '/../public/images/custom-gifts'
+    // init the uploader 
+    var uploader = require('blueimp-file-upload-expressjs')(options);
+    uploader.post(req, res, function (obj) {
+        res.redirect('/admin/customGifts');
+    });
+
 });
 
 module.exports = router;

@@ -16,7 +16,13 @@
 		<div class="main-container">
 			<% include ./partials/admin-navigation %>
 			<div class="content-area">
-				<button class="btn btn-orange delete-images float-right" page="<%= page %>">Delete</button>
+				<div class="form-area">
+					<button class="btn btn-orange delete-images float-right" page="<%= page %>">Delete</button>
+					<form action="/admin/upload/oilPaintings" method="POST" enctype="multipart/form-data" target="_self">
+						<input type="file" name="file" multiple/>
+						<button type="submit" class="btn btn-orange">Upload</button>
+					</form>
+				</div>
 				<div class="slider-container" style="clear:both">
 					<% for(var i=0; i< imageSet.length; i++) { %>
 						<div class="slider-container-item">

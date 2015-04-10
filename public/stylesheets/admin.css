@@ -103,6 +103,11 @@ a {
 	width: 1100px;
 }
 
+.form-area{
+	margin: auto;
+	width: 990px;
+}
+
 /*
 ========================================
 Login CSS
