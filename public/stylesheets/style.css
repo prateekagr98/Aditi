@@ -23,78 +23,6 @@ a {
 	height: 100%;
 }
 
-
-/*
-===================================
-Sidebar
-===================================
-*/
-
-.sidebar{
-	position: absolute;
-	padding-top: 60px;
-	width: 300px;
-	height: 100%;
-	background-color: #000000;
-	color: #FFFFFF !important;
-	border-right: 1px solid #CCCCCC;
-
-	-webkit-box-sizing: border-box; /* Safari 3.0 - 5.0, Chrome 1 - 9, Android 2.1 - 3.x */
- 	-moz-box-sizing: border-box;    /* Firefox 1 - 28 */
-  	box-sizing: border-box;         /* Safari 5.1+, Chrome 10+, Firefox 29+, Opera 7+, IE 8+, Android 4.0+, iOS any */
-}
-
-.logo{
-	display: block;
-	margin: auto;
-	width: 130px;
-	height: 130px;
-	margin-bottom: 30px;
-}
-
-.logo img{
-	width: 100%;
-}
-
-.caption{
-	text-align: center;
-	color: #F8F8F8;
-	margin-bottom: 25px;
-	font-size: 13px;
-}
-
-.sidebar-item{
-	display: block;
-	padding: 9px;
-	text-align: center;
-	text-transform: uppercase;
-	border-right: 5px solid #000000;
-	border-bottom: 1px solid #EEEEEE;
-	color: #FFFFFF;
-
-	-webkit-transition-property: background-color, border-right-color, color;
-    -moz-transition-property: background-color, border-right-color, color;
-    -o-transition-property: background-color, border-right-color, color;
-    ransition-property: background-color, border-right-color, color;
-    -webkit-transition-duration: 0.8s;
-    -moz-transition-duration: 0.8s;
-    -o-transition-duration: 0.8s;
-    transition-duration: 0.8s;
-    -webkit-transition-timing-function: ease-in-out;
-    -moz-transition-timing-function: ease-in-out;
-    -o-transition-timing-function: ease-in-out;
-    transition-timing-function: ease-in-out;
-}
-
-.sidebar-item:last-child{
-	border-bottom: 1px solid transparent;
-}
-
-.sidebar-item:hover{
-	cursor: pointer;
-	color: #000000;
-}
-
 .pink{
 	background-color: #F995F4;
 }
@@ -131,7 +59,8 @@ Header
 	left: 0px;
 	width: 100%;
 	height: 100px;
-	background: #009688;
+	background: #D27D47;
+	z-index: 1000;
 }
 
 .navigation{
@@ -150,7 +79,7 @@ Header
 
 .navigation li:hover{
 	cursor: pointer;
-	background-color: #00897B;
+	background-color: #D0743B;
 	color: #F8F8F8;
 }
 
@@ -161,6 +90,8 @@ Content Area
 */
 
 .content-area{
+	width: 1100px;
+	margin: auto;
 	margin-top: 100px;
 }
 
@@ -170,58 +101,9 @@ Homepage
 ====================================
 */
 
-/*.homepage-slider-loader{
-	position: absolute;
-    width: 100%;
-    height: 5px;
-    background-color: #FFFFFF;
-
-    -webkit-animation-name: progress-bar;  Chrome, Safari, Opera 
-    -webkit-animation-duration: 3s;
-    animation-name: progress-bar;
-    animation-duration: 3s;
-}*/
-
-/* Chrome, Safari, Opera */
-/*@-webkit-keyframes progress-bar {
-    from {
-    	width: 0%;
-    }
-    to {
-    	width: 100%;
-    }
-}*/
-
-/* Standard syntax */
-/*@keyframes progress-bar {
-    from {
-    	width: 0%;
-    }
-    to {
-    	width: 100%;
-    }
-}*/
-/*
-.homepage-slider{
-	margin: auto;
-	width: 1100px;
-}
-
-.homepage-slider-item{
-	float: left;
-	width: 450px;
-	height: 450px;
-	background-color: #7ACDE0;
-	margin: 5px;
-}
-
-.homepage-slider-item img{
-
-}*/
-
 .category-tiles{
 	margin: auto;
-	margin-top: 20px;
+	margin-top: 30px;
 	width: 361px;
 }
 
@@ -233,6 +115,16 @@ Homepage
 	padding: 8px 16px;
 }
 
+.tile-item:first-child{
+	border-top-left-radius: 3px;
+	border-bottom-left-radius: 3px;
+}
+
+.tile-item:last-child{
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+}
+
 /*
 ==========================================
 Image Slider
@@ -240,9 +132,7 @@ Image Slider
 */
 
 .slider-container{
-	position: absolute;
-	width: 100%;
-	height: 100%;
+
 }
 
 .slider-container-item{
@@ -342,7 +232,6 @@ About Page
 
 .about-heading{
 	text-align: center;
-	margin-top: 130px;
 	margin-left: 50px;
 	padding-bottom: 10px;
 	color: #FFB54E;
@@ -356,12 +245,19 @@ About Page
 }
 
 .about-image{
-	margin: auto;
-	display: block;
+	display: inline-block;
+	margin-top: 110px;
 	width: 400px;
 	border: 5px solid #FFFFFF;
+	vertical-align: top;
 }
 
+.about-content{
+	margin-top: 110px;
+	width: 680px;
+	display: inline-block;
+	vertical-align: top;
+}
 
 /*
 ============================================
