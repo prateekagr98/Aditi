@@ -8,10 +8,10 @@
 		<script type="text/javascript" src="/javascripts/script.js"></script>
 	</head>
 	<body>
-		<div class="main-container" style="background: url('/images/colouring_pencils.jpg') no-repeat; background-size: cover">
+		<div class="main-container">
 			<% include ./partials/header %>
-			<div class="content-area">
-				<h2 class="contact-heading">Contact Me</h2>
+			<div class="content-area category">
+				<h2 class="heading">Contact Me</h2>
 				<% if(typeof message !== 'undefined'){ %>
 					<% if(success === 'true'){ %>
 						<p class="contact-message" style="color: #4CAF50;"><%= message %></p>

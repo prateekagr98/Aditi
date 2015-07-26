@@ -4,7 +4,7 @@
         $('.gallery').masonry({
             // options
             itemSelector: '.gallery-item',
-            columnWidth: 200
+            columnWidth: 50
         });
 
         if ($('[rel="lightbox"]').length) {
