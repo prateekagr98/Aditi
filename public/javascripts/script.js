@@ -1,8 +1,10 @@
 (function () {
 
     $(document).ready(function () {
-        $(".slider-container-item > a > img").lazyload({
-            event: "sporty"
+        $('.gallery').masonry({
+            // options
+            itemSelector: '.gallery-item',
+            columnWidth: 200
         });
 
         if ($('[rel="lightbox"]').length) {
