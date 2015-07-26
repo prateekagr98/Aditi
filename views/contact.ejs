@@ -12,9 +12,9 @@
 				<h2 class="heading">Contact Me</h2>
 				<% if(typeof message !== 'undefined'){ %>
 					<% if(success === 'true'){ %>
-						<p class="contact-message" style="color: #4CAF50;"><%= message %></p>
+						<span class="contact-message" style="color: #4CAF50;"><%= message %></span>
 					<% } else { %>
-						<p class="contact-message" style="color: #F44336;"><%= message %></p>
+						<span class="contact-message" style="color: #F44336;"><%= message %></span>
 					<% } %>
 				<% } %>
 				<form class="contact-form" action="/sendEmail" method="POST">
@@ -27,4 +27,11 @@
 			<div class="clear"></div>
 		</div>
 	</body>
+	<script>
+		$(function(){
+			setTimeout(function(){
+				$('.contact-message').hide(200);
+			}, 5000);
+		});
+	</script>
 </html>

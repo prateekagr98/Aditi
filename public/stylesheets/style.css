@@ -180,36 +180,6 @@ Content Area
 }
 
 /*
-====================================
-Homepage
-====================================
-*/
-
-.category-tiles{
-	margin: auto;
-	margin-top: 30px;
-	width: 361px;
-}
-
-.tile-item{
-	float: left;
-	display: block;
-	color: #FFFFFF;
-	font-size: 16px;
-	padding: 8px 16px;
-}
-
-.tile-item:first-child{
-	border-top-left-radius: 3px;
-	border-bottom-left-radius: 3px;
-}
-
-.tile-item:last-child{
-	border-top-right-radius: 3px;
-	border-bottom-right-radius: 3px;
-}
-
-/*
 ============================================
 Contact Form
 ============================================
@@ -249,8 +219,8 @@ Contact Form
 	border-radius: 3px;
 	padding: 10px 20px;
 	font-size: 14px;
-	color: #424242;
-	background-color: #FAFAFA;
+	color: #FFFFFF;
+	background-color: #E1175F;
 }
 
 .contact-form button:hover{
@@ -258,7 +228,12 @@ Contact Form
 }
 
 .contact-message{
+	display: inline-block;
+	margin-bottom: 20px;
 	margin-left: 50px;
+	background: rgba(255,255,255, 0.9);
+	padding: 8px;
+	border-radius: 3px;
 }
 
 /*
