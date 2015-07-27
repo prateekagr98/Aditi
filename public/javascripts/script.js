@@ -6,7 +6,7 @@
                 itemSelector: '.gallery-item',
                 columnWidth: 50
             });
-        }, 2000);
+        }, 5000);
 
         if ($('[rel="lightbox"]').length) {
             $('[rel="lightbox"]').lightbox();
