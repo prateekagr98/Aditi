@@ -50,7 +50,8 @@ a {
 }
 
 .logo{
-	width: 350px;
+	width: 150px;
+	margin-left: 50px;
 }
 
 footer{
@@ -83,6 +84,7 @@ Header
 	font-size: 15px;
 	float: right;
 	margin-right: 20px;
+	padding-left: 0px;
 }
 
 .navigation a{
@@ -300,4 +302,33 @@ View Contact
 
 .message{
 	font-size: 13px;
+}
+
+
+/*
+==========================================
+Responsive CSS
+==========================================
+*/
+
+@media (max-width: 990px) {
+  
+  	.content-area {
+  		width: 100%;
+  	}
+
+  	.navigation {
+  		width: 400px;
+  	}
+}
+
+@media (max-width: 540px) {
+  
+  	.heading {
+  		width: 80%;
+  	}
+
+  	.category .heading {
+		width: 80%;
+	}
 }
