@@ -329,6 +329,14 @@ Responsive CSS
 	  	background: url('http://www.thinkpilgrim.com/wp-content/uploads/2014/11/colorful.jpg');
 	  	background-size: cover;
 	}
+
+	.navigation {
+		width: 185px;
+	}
+
+	a[href="/"], a[href="/oilPaintings"], a[href="/portraits"], a[href="/sketches"], a[href="/customGifts"] {
+		display: none;
+	}
 }
 
 @media (max-width: 540px) {
