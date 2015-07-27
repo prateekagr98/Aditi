@@ -334,9 +334,10 @@ Responsive CSS
 		width: 185px;
 	}
 
-	a[href="/"], a[href="/oilPaintings"], a[href="/portraits"], a[href="/sketches"], a[href="/customGifts"] {
-		display: none;
+	.home-tab, .oil-painting-tab, .sketches-tab, .custom-gifts-tab {
+		display: none !important;
 	}
+
 }
 
 @media (max-width: 540px) {
@@ -361,5 +362,10 @@ Responsive CSS
 
 	.contact-form textarea{
 		height: 100px;
+	}
+
+	.logo {
+		margin-left: 10px;
+		width: 120px;
 	}
 }
