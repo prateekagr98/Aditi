@@ -320,6 +320,15 @@ Responsive CSS
   	.navigation {
   		width: 400px;
   	}
+
+  	body {
+		padding: 0px;
+		margin-top: 0px;
+		border: 0px;
+	  	font: 14px 'Lucida Grande', Helvetica, Arial, sans-serif;
+	  	background: url('http://www.thinkpilgrim.com/wp-content/uploads/2014/11/colorful.jpg');
+	  	background-size: cover;
+	}
 }
 
 @media (max-width: 540px) {
