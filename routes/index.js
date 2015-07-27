@@ -56,6 +56,19 @@ router.get('/customGifts', function (req, res, next) {
     });
 });
 
+router.get('/rakhi', function (req, res, next) {
+
+    glob("public/images/rakhi/*", null, function (er, imagePaths) {
+        var paths = _.map(imagePaths, function (item) {
+            return item.replace('public', '');
+        });
+        res.render('rakhi', {
+            page: 'rakhi',
+            imageSet: paths
+        });
+    });
+});
+
 router.get('/media', function (req, res, next) {
 
     glob("public/images/media/*", null, function (er, imagePaths) {

@@ -3,7 +3,9 @@ body {
 	margin-top: 0px;
 	border: 0px;
   	font: 14px 'Lucida Grande', Helvetica, Arial, sans-serif;
-  	background-color: #F8F8F8 !important;
+  	background: url('http://www.thinkpilgrim.com/wp-content/uploads/2014/11/colorful.jpg') no-repeat;
+  	background-size: cover;
+  	background-attachment: fixed;
 }
 
 a {
@@ -47,6 +49,20 @@ a {
 	background-color: #83C3F1;
 }
 
+.logo{
+	width: 350px;
+}
+
+footer{
+	margin-top: 20px;
+	text-align: center;
+	color: #FFFFFF;
+	background-color: #E1175F;
+	padding: 10px;
+	font-style: italic;
+	font-weight: 100;
+}
+
 /*
 ===================================
 Header
@@ -54,33 +70,87 @@ Header
 */
 
 .header{
-	position: fixed;
-	top: 0px;
-	left: 0px;
 	width: 100%;
-	height: 100px;
-	background: #D27D47;
-	z-index: 1000;
+	height: 190px;
+	overflow: hidden;
+/*	background: url('http://static.guim.co.uk/sys-images/Guardian/Pix/pictures/2010/4/12/1271088026441/Blue-paint-001.jpg') no-repeat right;
+	background-size: auto 100%;*/
 }
 
 .navigation{
-	color: #FFFFFF;
+	color: #E1175F;
 	list-style: none;
 	font-size: 15px;
 	float: right;
 	margin-right: 20px;
 }
 
+.navigation a{
+	display: inline-block;
+	padding: 20px;
+}
+
 .navigation li{
 	float: left;
-	padding: 20px;
-	transition: background-color 0.5s ease;
+	padding-bottom: 5px;
+	border-bottom: 2px solid transparent;
+	transition: border-bottom 0.5s ease;
 }
 
 .navigation li:hover{
 	cursor: pointer;
-	background-color: #D0743B;
-	color: #F8F8F8;
+	border-bottom: 2px solid #E1175F;
+}
+
+/*
+===================================
+Gallery
+===================================
+*/
+
+.gallery {
+	margin-top: 35px;
+}
+
+.gallery-item {
+	display: inline-block;
+	width: 300px;
+	margin: 20px;
+	vertical-align: top;
+}
+
+.gallery-item img{
+	display: block;
+	width: 100%;
+}
+
+.with-border img {
+	border: 10px solid #FFFFFF;
+}
+
+.gallery-item p {
+	position: relative;
+	background-color: #FFFFFF;
+	margin: 0px;
+	width: 100%;
+	padding: 12px;
+	color: #616161;
+	font-style: italic;
+
+	-webkit-box-sizing: border-box; /* Safari 3.0 - 5.0, Chrome 1 - 9, Android 2.1 - 3.x */
+ 	-moz-box-sizing: border-box;    /* Firefox 1 - 28 */
+  	box-sizing: border-box;         /* Safari 5.1+, Chrome 10+, Firefox 29+, Opera 7+, IE 8+, Android 4.0+, iOS any */
+}
+
+.gallery-item p::before{
+	content: '';
+	position: absolute;
+	top: -15px; left: 40px;
+	width: 0;
+	height: 0;
+	border-left: 15px solid transparent;
+	border-right: 15px solid transparent;
+	border-bottom: 15px solid #FFFFFF;
 }
 
 /*
@@ -92,76 +162,21 @@ Content Area
 .content-area{
 	width: 1100px;
 	margin: auto;
-	margin-top: 100px;
+	margin-top: 70px;
 }
 
-/*
-====================================
-Homepage
-====================================
-*/
-
-.category-tiles{
-	margin: auto;
-	margin-top: 30px;
-	width: 361px;
+.heading{
+	color: #616161;
+	font-style: italic;
+	font-weight: normal;
+	margin: 20px;
+	padding: 12px;
+	width: 89%;
+	background: rgba(255, 255, 255, 0.9);
 }
 
-.tile-item{
-	float: left;
-	display: block;
-	color: #FFFFFF;
-	font-size: 16px;
-	padding: 8px 16px;
-}
-
-.tile-item:first-child{
-	border-top-left-radius: 3px;
-	border-bottom-left-radius: 3px;
-}
-
-.tile-item:last-child{
-	border-top-right-radius: 3px;
-	border-bottom-right-radius: 3px;
-}
-
-/*
-==========================================
-Image Slider
-==========================================
-*/
-
-.slider-container{
-
-}
-
-.slider-container-item{
-	position: relative;
-	float: left;
-	width: 50%;
-	height: 430px;
-	margin-top: 30px;
-
-	-webkit-box-sizing: border-box; /* Safari 3.0 - 5.0, Chrome 1 - 9, Android 2.1 - 3.x */
- 	-moz-box-sizing: border-box;    /* Firefox 1 - 28 */
-  	box-sizing: border-box;         /* Safari 5.1+, Chrome 10+, Firefox 29+, Opera 7+, IE 8+, Android 4.0+, iOS any */
-}
-
-.slider-container-item img{
-	position: absolute;
-	top: 0px; left: 0px;
-	right: 0px; bottom: 0px;
-	margin: auto;
-	max-width: 380px;
-	height: 380px;
-	overflow: hidden;
-	border: 10px solid #FFFFFF;
-	border-radius: 6px;
-	box-shadow: 10px 10px 5px #585858;
-}
-
-.slider-container-item img:hover{
-	cursor: pointer;
+.category .heading {
+	width: 91%;
 }
 
 /*
@@ -199,13 +214,13 @@ Contact Form
 }
 
 .contact-form button{
-	float: right;
+	float: left;
 	border: none;
 	border-radius: 3px;
 	padding: 10px 20px;
 	font-size: 14px;
-	color: #424242;
-	background-color: #FAFAFA;
+	color: #FFFFFF;
+	background-color: #E1175F;
 }
 
 .contact-form button:hover{
@@ -213,7 +228,12 @@ Contact Form
 }
 
 .contact-message{
+	display: inline-block;
+	margin-bottom: 20px;
 	margin-left: 50px;
+	background: rgba(255,255,255, 0.9);
+	padding: 8px;
+	border-radius: 3px;
 }
 
 /*
@@ -223,7 +243,7 @@ About Page
 */
 
 .fb-icon{
-	position: absolute;
+	position: fixed;
 	width: 40px;
 	bottom: 20px;
 	right: 30px;

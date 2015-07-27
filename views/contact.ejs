@@ -3,20 +3,18 @@
 	<head>
 		<title>Contact | Artist Aditi</title>
 		<link rel="stylesheet" href="/stylesheets/style.css" />
-
 		<script type="text/javascript" src="/javascripts/jquery-1.11.2.min.js"></script>
-		<script type="text/javascript" src="/javascripts/script.js"></script>
 	</head>
 	<body>
-		<div class="main-container" style="background: url('/images/colouring_pencils.jpg') no-repeat; background-size: cover">
+		<div class="main-container">
 			<% include ./partials/header %>
-			<div class="content-area">
-				<h2 class="contact-heading">Contact Me</h2>
+			<div class="content-area category">
+				<h2 class="heading">Contact Me</h2>
 				<% if(typeof message !== 'undefined'){ %>
 					<% if(success === 'true'){ %>
-						<p class="contact-message" style="color: #4CAF50;"><%= message %></p>
+						<span class="contact-message" style="color: #4CAF50;"><%= message %></span>
 					<% } else { %>
-						<p class="contact-message" style="color: #F44336;"><%= message %></p>
+						<span class="contact-message" style="color: #F44336;"><%= message %></span>
 					<% } %>
 				<% } %>
 				<form class="contact-form" action="/sendEmail" method="POST">
@@ -26,7 +24,15 @@
 					<button type="submit">Send</button>
 				</form>
 			</div>
-			<div class="clear"></div>
-		</div>
+		<footer>
+			Copyright &copy; Artist Aditi
+		</footer>
 	</body>
+	<script>
+		$(function(){
+			setTimeout(function(){
+				$('.contact-message').hide(200);
+			}, 5000);
+		});
+	</script>
 </html>

@@ -6,25 +6,25 @@
 		<link rel="stylesheet" href="/stylesheets/jquery.lightbox.min.css" />
 
 		<script type="text/javascript" src="/javascripts/jquery-1.11.2.min.js"></script>
-		<script type="text/javascript" src="/javascripts/lazyload.js"></script>
 		<script type="text/javascript" src="/javascripts/jquery.lightbox.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.1/masonry.pkgd.min.js"></script>
 		<script type="text/javascript" src="/javascripts/script.js"></script>
 	</head>
 	<body>
 		<div class="main-container">
 			<% include ./partials/header %>
-			<div class="content-area">
-				<div class="slider-container">
+			<div class="content-area category">
+				<h2 class="heading">Oil Paintings</h2>
+				<div class="gallery">
 					<% for(var i=0; i< imageSet.length; i++) { %>
-						<div class="slider-container-item">
-							<a href="<%= imageSet[i] %>" rel="lightbox">
-								<img src="<%= imageSet[i] %>" />
-							</a>
+						<div class="gallery-item with-border">
+							<a href="<%= imageSet[i] %>" rel="lightbox"><img src="<%= imageSet[i] %>" /></a>
 						</div>
 					<% } %>
 				</div>
 			</div>
-			<div class="clear"></div>
-		</div>
+		<footer>
+			Copyright &copy; Artist Aditi
+		</footer>
 	</body>
 </html>
