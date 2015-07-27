@@ -43,6 +43,19 @@ router.get('/portraits', function (req, res, next) {
     });
 });
 
+router.get('/sketches', function (req, res, next) {
+
+    glob("public/images/sketches/*", null, function (er, imagePaths) {
+        var paths = _.map(imagePaths, function (item) {
+            return item.replace('public', '');
+        });
+        res.render('sketches', {
+            page: 'sketches',
+            imageSet: paths
+        });
+    });
+});
+
 router.get('/customGifts', function (req, res, next) {
 
     glob("public/images/custom-gifts/*", null, function (er, imagePaths) {
