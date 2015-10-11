@@ -203,7 +203,7 @@ router.get('/viewContacts', function (req, res, next) {
         }
 
         res.render('viewContacts', {
-            mails: mails
+            mails: mails.reverse()
         });
     });
 });
