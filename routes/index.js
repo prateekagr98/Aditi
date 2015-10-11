@@ -180,7 +180,9 @@ router.post('/sendEmail', function (req, res, next) {
     var newForm = new ContactModel({
         name: req.body.name,
         email: req.body.email,
-        message: req.body.message
+        number: req.body.number,
+        message: req.body.message,
+        created_at: (new Date()).toString()
     });
 
     newForm.save(function (err, newForm) {

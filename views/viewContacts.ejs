@@ -12,10 +12,13 @@
 			<% for(var i=0; i<mails.length; i++){ %>
 				<div class="viewContact-item">
 					<p class="name">
-						<%= mails[i].name %> (<%= mails[i].email %>)
+						<%= mails[i].name %> (<%= mails[i].email %>) <span class="number"><%= mails[i].number %></span>
 					</p>
 					<p class="message">
 						<%= mails[i].message %>
+					</p>
+					<p>
+						<%= mails[i].created_at %>
 					</p>
 				</div>
 			<% } %>

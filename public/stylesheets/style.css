@@ -1,67 +1,75 @@
 body {
-	padding: 0px;
-	margin-top: 0px;
-	border: 0px;
-  	font: 14px 'Lucida Grande', Helvetica, Arial, sans-serif;
-  	background: url('http://www.thinkpilgrim.com/wp-content/uploads/2014/11/colorful.jpg') no-repeat;
-  	background-size: cover;
-  	background-attachment: fixed;
+    padding: 0px;
+    margin-top: 0px;
+    border: 0px;
+    font: 14px 'Lucida Grande', Helvetica, Arial, sans-serif;
+    background: url("http://www.thinkpilgrim.com/wp-content/uploads/2014/11/colorful.jpg") no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 a {
- 	color: inherit;
- 	text-decoration: none;
+    color: inherit;
+    text-decoration: none;
 }
 
-.clear{
-	clear: both;
+.clear {
+    clear: both;
 }
 
-.main-container{
-	position: absolute;
-	top: 0px;
-	left: 0px;
-	width: 100%;
-	height: 100%;
+.main-container {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
 }
 
-.pink{
-	background-color: #F995F4;
+.pink {
+    background-color: #F995F4;
 }
 
-.dark-orange{
-	background-color: #EF6E15;
+.dark-orange {
+    background-color: #EF6E15;
 }
 
-.purple{
-	background-color: #A05FEF;
+.purple {
+    background-color: #A05FEF;
 }
 
-.green{
-	background-color: #BBD302;
+.green {
+    background-color: #BBD302;
 }
 
-.orange{
-	background-color: #FFB54E;
+.number {
+    color: #FFB54E;
 }
 
-.blue{
-	background-color: #83C3F1;
+.email {
+    color: #A05FEF;
 }
 
-.logo{
-	width: 150px;
-	margin-left: 50px;
+.orange {
+    background-color: #FFB54E;
 }
 
-footer{
-	margin-top: 20px;
-	text-align: center;
-	color: #FFFFFF;
-	background-color: #E1175F;
-	padding: 10px;
-	font-style: italic;
-	font-weight: 100;
+.blue {
+    background-color: #83C3F1;
+}
+
+.logo {
+    width: 150px;
+    margin-left: 50px;
+}
+
+footer {
+    margin-top: 20px;
+    text-align: center;
+    color: #FFFFFF;
+    background-color: #E1175F;
+    padding: 10px;
+    font-style: italic;
+    font-weight: 100;
 }
 
 /*
@@ -70,38 +78,39 @@ Header
 ===================================
 */
 
-.header{
-	width: 100%;
-	height: 190px;
-	overflow: hidden;
-/*	background: url('http://static.guim.co.uk/sys-images/Guardian/Pix/pictures/2010/4/12/1271088026441/Blue-paint-001.jpg') no-repeat right;
-	background-size: auto 100%;*/
+.header {
+    width: 100%;
+    height: 190px;
+    overflow: hidden;
+
+    /*	background: url('http://static.guim.co.uk/sys-images/Guardian/Pix/pictures/2010/4/12/1271088026441/Blue-paint-001.jpg') no-repeat right;
+    	background-size: auto 100%;*/
 }
 
-.navigation{
-	color: #E1175F;
-	list-style: none;
-	font-size: 15px;
-	float: right;
-	margin-right: 20px;
-	padding-left: 0px;
+.navigation {
+    color: #E1175F;
+    list-style: none;
+    font-size: 15px;
+    float: right;
+    margin-right: 20px;
+    padding-left: 0px;
 }
 
-.navigation a{
-	display: inline-block;
-	padding: 20px;
+.navigation a {
+    display: inline-block;
+    padding: 20px;
 }
 
-.navigation li{
-	float: left;
-	padding-bottom: 5px;
-	border-bottom: 2px solid transparent;
-	transition: border-bottom 0.5s ease;
+.navigation li {
+    float: left;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.5s ease;
 }
 
-.navigation li:hover{
-	cursor: pointer;
-	border-bottom: 2px solid #E1175F;
+.navigation li:hover {
+    cursor: pointer;
+    border-bottom: 2px solid #E1175F;
 }
 
 /*
@@ -111,48 +120,48 @@ Gallery
 */
 
 .gallery {
-	margin-top: 35px;
+    margin-top: 35px;
 }
 
 .gallery-item {
-	display: inline-block;
-	width: 300px;
-	margin: 20px;
-	vertical-align: top;
+    display: inline-block;
+    width: 300px;
+    margin: 20px;
+    vertical-align: top;
 }
 
-.gallery-item img{
-	display: block;
-	width: 100%;
+.gallery-item img {
+    display: block;
+    width: 100%;
 }
 
 .with-border img {
-	border: 10px solid #FFFFFF;
+    border: 10px solid #FFFFFF;
 }
 
 .gallery-item p {
-	position: relative;
-	background-color: #FFFFFF;
-	margin: 0px;
-	width: 100%;
-	padding: 12px;
-	color: #616161;
-	font-style: italic;
-
-	-webkit-box-sizing: border-box; /* Safari 3.0 - 5.0, Chrome 1 - 9, Android 2.1 - 3.x */
- 	-moz-box-sizing: border-box;    /* Firefox 1 - 28 */
-  	box-sizing: border-box;         /* Safari 5.1+, Chrome 10+, Firefox 29+, Opera 7+, IE 8+, Android 4.0+, iOS any */
+    position: relative;
+    background-color: #FFFFFF;
+    margin: 0px;
+    width: 100%;
+    padding: 12px;
+    color: #616161;
+    font-style: italic;
+    -webkit-box-sizing: border-box; /* Safari 3.0 - 5.0, Chrome 1 - 9, Android 2.1 - 3.x */
+    -moz-box-sizing: border-box; /* Firefox 1 - 28 */
+    box-sizing: border-box; /* Safari 5.1+, Chrome 10+, Firefox 29+, Opera 7+, IE 8+, Android 4.0+, iOS any */
 }
 
-.gallery-item p::before{
-	content: '';
-	position: absolute;
-	top: -15px; left: 40px;
-	width: 0;
-	height: 0;
-	border-left: 15px solid transparent;
-	border-right: 15px solid transparent;
-	border-bottom: 15px solid #FFFFFF;
+.gallery-item p::before {
+    content: '';
+    position: absolute;
+    top: -15px;
+    left: 40px;
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 15px solid #FFFFFF;
 }
 
 /*
@@ -161,24 +170,24 @@ Content Area
 ===================================
 */
 
-.content-area{
-	width: 1100px;
-	margin: auto;
-	margin-top: 70px;
+.content-area {
+    width: 1100px;
+    margin: auto;
+    margin-top: 70px;
 }
 
-.heading{
-	color: #616161;
-	font-style: italic;
-	font-weight: normal;
-	margin: 20px;
-	padding: 12px;
-	width: 89%;
-	background: rgba(255, 255, 255, 0.9);
+.heading {
+    color: #616161;
+    font-style: italic;
+    font-weight: normal;
+    margin: 20px;
+    padding: 12px;
+    width: 89%;
+    background: rgba(255, 255, 255, 0.9);
 }
 
 .category .heading {
-	width: 91%;
+    width: 91%;
 }
 
 /*
@@ -187,55 +196,55 @@ Contact Form
 ============================================
 */
 
-.contact-form{
-	margin-left: 50px;
-	width: 370px;
-	height: 330px;
+.contact-form {
+    margin-left: 50px;
+    width: 370px;
+    height: 400px;
 }
 
-.contact-heading{
-	margin-top: 120px;
-	margin-left: 50px;
-	color: #37A5F4;
-	font: 30px "Lucida Grande",Helvetica,Arial,sans-serif;
+.contact-heading {
+    margin-top: 120px;
+    margin-left: 50px;
+    color: #37A5F4;
+    font: 30px "Lucida Grande",Helvetica,Arial,sans-serif;
 }
 
-.contact-form input, .contact-form textarea{
-	margin-bottom: 20px;
-	display: block;
-	border: none;
-	border-radius: 3px;
-	padding: 15px 10px;
-	width: 350px;
-	font: 14px "Lucida Grande",Helvetica,Arial,sans-serif;
-	color: #424242;
+.contact-form input, .contact-form textarea {
+    margin-bottom: 20px;
+    display: block;
+    border: none;
+    border-radius: 3px;
+    padding: 15px 10px;
+    width: 350px;
+    font: 14px "Lucida Grande",Helvetica,Arial,sans-serif;
+    color: #424242;
 }
 
-.contact-form textarea{
-	height: 100px;
+.contact-form textarea {
+    height: 100px;
 }
 
-.contact-form button{
-	float: left;
-	border: none;
-	border-radius: 3px;
-	padding: 10px 20px;
-	font-size: 14px;
-	color: #FFFFFF;
-	background-color: #E1175F;
+.contact-form button {
+    float: left;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 20px;
+    font-size: 14px;
+    color: #FFFFFF;
+    background-color: #E1175F;
 }
 
-.contact-form button:hover{
-	cursor: pointer;
+.contact-form button:hover {
+    cursor: pointer;
 }
 
-.contact-message{
-	display: inline-block;
-	margin-bottom: 20px;
-	margin-left: 50px;
-	background: rgba(255,255,255, 0.9);
-	padding: 8px;
-	border-radius: 3px;
+.contact-message {
+    display: inline-block;
+    margin-bottom: 20px;
+    margin-left: 50px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 8px;
+    border-radius: 3px;
 }
 
 /*
@@ -244,41 +253,41 @@ About Page
 ============================================
 */
 
-.fb-icon{
-	position: fixed;
-	width: 40px;
-	bottom: 20px;
-	right: 30px;
-	border-radius: 100%;
+.fb-icon {
+    position: fixed;
+    width: 40px;
+    bottom: 20px;
+    right: 30px;
+    border-radius: 100%;
 }
 
-.about-heading{
-	text-align: center;
-	margin-left: 50px;
-	padding-bottom: 10px;
-	color: #FFB54E;
-	font: 25px "Lucida Grande",Helvetica,Arial,sans-serif;
+.about-heading {
+    text-align: center;
+    margin-left: 50px;
+    padding-bottom: 10px;
+    color: #FFB54E;
+    font: 25px "Lucida Grande",Helvetica,Arial,sans-serif;
 }
 
-.about-caption{
-	text-align: center;
-	font-size: 18px;
-	color: #78CCDE;
+.about-caption {
+    text-align: center;
+    font-size: 18px;
+    color: #78CCDE;
 }
 
-.about-image{
-	display: inline-block;
-	margin-top: 110px;
-	width: 400px;
-	border: 5px solid #FFFFFF;
-	vertical-align: top;
+.about-image {
+    display: inline-block;
+    margin-top: 110px;
+    width: 400px;
+    border: 5px solid #FFFFFF;
+    vertical-align: top;
 }
 
-.about-content{
-	margin-top: 110px;
-	width: 680px;
-	display: inline-block;
-	vertical-align: top;
+.about-content {
+    margin-top: 110px;
+    width: 680px;
+    display: inline-block;
+    vertical-align: top;
 }
 
 /*
@@ -286,24 +295,23 @@ About Page
 View Contact
 ============================================
 */
-.viewContact-item{
-	margin: auto;
-	margin-top: 30px;
-	width: 990px;
-	padding: 5px;
-	padding-left: 25px;
-	background: #F8F8F8;
-	border-radius: 6px;
+.viewContact-item {
+    margin: auto;
+    margin-top: 30px;
+    width: 990px;
+    padding: 5px;
+    padding-left: 25px;
+    background: #F8F8F8;
+    border-radius: 6px;
 }
 
-.name{
-	color: #83C3F1;
+.name {
+    color: #83C3F1;
 }
 
-.message{
-	font-size: 13px;
+.message {
+    font-size: 13px;
 }
-
 
 /*
 ==========================================
@@ -312,60 +320,57 @@ Responsive CSS
 */
 
 @media (max-width: 990px) {
-  
-  	.content-area {
-  		width: 100%;
-  	}
+    .content-area {
+        width: 100%;
+    }
 
-  	.navigation {
-  		width: 400px;
-  	}
+    .navigation {
+        width: 400px;
+    }
 
-  	body {
-		padding: 0px;
-		margin-top: 0px;
-		border: 0px;
-	  	font: 14px 'Lucida Grande', Helvetica, Arial, sans-serif;
-	  	background: url('http://www.thinkpilgrim.com/wp-content/uploads/2014/11/colorful.jpg');
-	  	background-size: cover;
-	}
+    body {
+        padding: 0px;
+        margin-top: 0px;
+        border: 0px;
+        font: 14px 'Lucida Grande', Helvetica, Arial, sans-serif;
+        background: url("http://www.thinkpilgrim.com/wp-content/uploads/2014/11/colorful.jpg");
+        background-size: cover;
+    }
 
-	.navigation {
-		width: 185px;
-	}
+    .navigation {
+        width: 185px;
+    }
 
-	.home-tab, .oil-painting-tab, .sketches-tab, .custom-gifts-tab {
-		display: none !important;
-	}
-
+    .home-tab, .oil-painting-tab, .sketches-tab, .custom-gifts-tab {
+        display: none !important;
+    }
 }
 
 @media (max-width: 540px) {
-  
-  	.heading {
-  		width: 80%;
-  	}
+    .heading {
+        width: 80%;
+    }
 
-  	.category .heading {
-		width: 80%;
-	}
+    .category .heading {
+        width: 80%;
+    }
 
-	.contact-form{
-		margin: auto;
-		width: 90%;
-		height: 330px;
-	}
+    .contact-form {
+        margin: auto;
+        width: 90%;
+        height: 330px;
+    }
 
-	.contact-form input, .contact-form textarea{
-		width: 90%;
-	}
+    .contact-form input, .contact-form textarea {
+        width: 90%;
+    }
 
-	.contact-form textarea{
-		height: 100px;
-	}
+    .contact-form textarea {
+        height: 100px;
+    }
 
-	.logo {
-		margin-left: 10px;
-		width: 120px;
-	}
+    .logo {
+        margin-left: 10px;
+        width: 120px;
+    }
 }

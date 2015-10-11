@@ -3,7 +3,9 @@ var mongoose = require('mongoose');
 var contactSchema = mongoose.Schema({
     name: String,
     email: String,
-    message: String
+    number: String,
+    message: String,
+    created_at: String
 });
 
 var ContactModel = mongoose.model('Contact', contactSchema);
