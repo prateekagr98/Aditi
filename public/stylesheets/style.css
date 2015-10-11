@@ -3,7 +3,9 @@ body {
     margin-top: 0px;
     border: 0px;
     font: 14px 'Lucida Grande', Helvetica, Arial, sans-serif;
-    background: url("http://www.thinkpilgrim.com/wp-content/uploads/2014/11/colorful.jpg") no-repeat;
+
+    /*    background: url("http://www.thinkpilgrim.com/wp-content/uploads/2014/11/colorful.jpg") no-repeat;*/
+    background: url("/images/bg.jpeg") no-repeat;
     background-size: cover;
     background-attachment: fixed;
 }
@@ -15,6 +17,10 @@ a {
 
 .clear {
     clear: both;
+}
+
+.margin-20 {
+    margin: 20px;
 }
 
 .main-container {
@@ -65,8 +71,8 @@ a {
 footer {
     margin-top: 20px;
     text-align: center;
-    color: #FFFFFF;
-    background-color: #E1175F;
+    color: #E1175F;
+    background-color: rgba(255, 255, 255, 0.5);
     padding: 10px;
     font-style: italic;
     font-weight: 100;
@@ -83,8 +89,8 @@ Header
     height: 190px;
     overflow: hidden;
 
-    /*	background: url('http://static.guim.co.uk/sys-images/Guardian/Pix/pictures/2010/4/12/1271088026441/Blue-paint-001.jpg') no-repeat right;
-    	background-size: auto 100%;*/
+    /*  background: url('http://static.guim.co.uk/sys-images/Guardian/Pix/pictures/2010/4/12/1271088026441/Blue-paint-001.jpg') no-repeat right;
+        background-size: auto 100%;*/
 }
 
 .navigation {
@@ -230,8 +236,8 @@ Contact Form
     border-radius: 3px;
     padding: 10px 20px;
     font-size: 14px;
-    color: #FFFFFF;
-    background-color: #E1175F;
+    color: #E1175F;
+    background-color: rgba(255, 255, 255, 0.6);
 }
 
 .contact-form button:hover {
@@ -245,6 +251,10 @@ Contact Form
     background: rgba(255, 255, 255, 0.9);
     padding: 8px;
     border-radius: 3px;
+}
+
+.contact-caption {
+    color: #E1175F;
 }
 
 /*

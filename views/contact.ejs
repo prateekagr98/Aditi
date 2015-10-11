@@ -11,6 +11,9 @@
 			<% include ./partials/header %>
 			<div class="content-area category">
 				<h2 class="heading">Contact Me</h2>
+				<p class="margin-20 contact-caption">
+					Submit you query or drop a mail at doc.aditi28@gmail.com
+				</p>
 				<% if(typeof message !== 'undefined'){ %>
 					<% if(success === 'true'){ %>
 						<span class="contact-message" style="color: #4CAF50;"><%= message %></span>
@@ -26,7 +29,7 @@
 					<button type="submit">Send</button>
 				</form>
 			</div>
-		<footer>
+		<footer style="background:none">
 			Copyright &copy; Artist Aditi
 		</footer>
 	</body>
