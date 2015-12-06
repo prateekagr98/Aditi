@@ -106,6 +106,11 @@ a {
     color: #FFFFFF;
 }
 
+.btn-blue {
+    background-color: #3F51B5;
+    color: #FFFFFF;
+}
+
 .btn:hover {
     cursor: pointer;
 }
@@ -165,7 +170,7 @@ Login CSS
 .login-container h3 {
     text-align: center;
     padding-bottom: 30px;
-    color: #EF6E15;
+    color: #3F51B5;
     font: 25px "Lucida Grande",Helvetica,Arial,sans-serif;
 }
 
@@ -184,9 +189,7 @@ Login CSS
 }
 
 .login-container input:focus {
-    box-shadow: none;
     outline: none;
-    border-bottom: 2px solid #EF6E15;
 }
 
 .login-button {
@@ -220,13 +223,13 @@ Navigation bar
 }
 
 .nav-container a:hover {
-    background: #A05FEF;
+    background: #3F51B5;
     color: #FFFFFF;
 }
 
 .active-nav {
     position: relative;
-    background: #A05FEF !important;
+    background: #3F51B5 !important;
     color: #FFFFFF !important;
 }
 
@@ -241,7 +244,7 @@ Navigation bar
     height: 0;
     border-left: 20px solid transparent;
     border-right: 20px solid transparent;
-    border-top: 20px solid #A05FEF;
+    border-top: 20px solid #3F51B5;
 }
 
 /*
@@ -262,11 +265,11 @@ Content Area
     width: 300px;
     height: 300px;
     vertical-align: middle;
-    border: 4px solid transparent;
+    border: 5px solid transparent;
     border-radius: 6px;
 }
 
 .selected-image {
-    border-color: #F995F4 !important;
+    border-color: #3F51B5 !important;
     border-radius: 6px;
 }
