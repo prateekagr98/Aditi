@@ -19,16 +19,20 @@
 			<div class="content-area">
 				<div class="form-area">
 					<button class="btn btn-orange delete-images float-right">Delete</button>
-					<form action="/upload" method="post" enctype="multipart/form-data">  
-					  <label for="file">Select your image:</label>
-					  <input type="file" name="file" id="file" />
+					<form action="/upload" method="post" enctype="multipart/form-data">
+						<select name="category_id">  
+					  	<% for(var i=0; i<categories.length; i++) { %>
+					  		<option value="<%= categories[i]._id %>"><%= categories[i].name %></option>
+					  	<% } %>
+						</select>
+					  <input type="file" name="file" id="file" multiple />
 					  <span class="hint">Supported files: jpg, jpeg, png.</span>
 					  <button type="submit">upload</button>
 					</form>
 				</div>
 				<div class="slider-container" style="clear:both">
 					<% for(var i=0; i< imageSet.length; i++) { %>
-						<div class="slider-container-item"><img src="<%= imageSet[i] %>" /></div>
+						<div class="slider-container-item"><img src="<%= imageSet[i].url %>" /></div>
 					<% } %>
 				</div>
 			</div>

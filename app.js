@@ -8,8 +8,32 @@ var express = require('express'),
   passport = require('passport'),
   session = require('express-session'),
   methodOverride = require('method-override'),
+  multer = require('multer'),
+  async = require('async'),
+  storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+      cb(null, './public/images/uploads')
+    },
+    filename: function (req, file, cb) {
+      console.log(file);
+      cb(null, file.originalname)
+    }
+  }),
+  upload = multer({
+    storage: storage
+  }),
   LocalStrategy = require('passport-local').Strategy,
-  AdminModel = require('./models/AdminModel');
+  AdminModel = require('./models/AdminModel'),
+  ImageModel = require('./models/ImageModel');
+
+var fs = require('fs');
+var path = require('path');
+var uid = require('uid2');
+var mime = require('mime');
+
+//Constants
+var TARGET_PATH = path.resolve(__dirname, './public/images/upload/');
+var IMAGE_TYPES = ['image/jpeg', 'image/png'];
 
 passport.use(new LocalStrategy(
   function (username, password, done) {
@@ -84,6 +108,25 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(express.static(path.join(__dirname, 'public')));
+
+app.post('/upload', upload.any(), function (req, res, next) {
+  async.each(req.files, function (file, next) {
+    file.path = file.path.replace('public', '');
+
+    ImageModel.create({
+      'category_id': req.body.category_id,
+      'url': file.path
+    }, function (err) {
+      if (err) {
+        console.error(err);
+      }
+
+      next();
+    })
+  }, function (err) {
+    res.redirect('/admin');
+  })
+})
 
 app.use('/', routes);
 app.use('/users', users);
