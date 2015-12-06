@@ -8,13 +8,29 @@
 				background: #F8F8F8;
 			}
 		</style>
+		<script type="text/javascript" src="/javascripts/jquery-1.11.2.min.js"></script>
+		<script type="text/javascript" src="/javascripts/lazyload.js"></script>
+		<script type="text/javascript" src="/javascripts/admin-script.js"></script>
 	</head>
 	<body>
 		<div class="main-container">
 			<a href="/admin/logout" class="btn btn-red" style="position: fixed; top: 15px; right: 15px; text-decoration:none">Logout</a>
 			<% include ./partials/admin-navigation %>
 			<div class="content-area">
-				Click on any of the above tabs to modify the corresponding section :)
+				<div class="form-area">
+					<button class="btn btn-orange delete-images float-right">Delete</button>
+					<form action="/upload" method="post" enctype="multipart/form-data">  
+					  <label for="file">Select your image:</label>
+					  <input type="file" name="file" id="file" />
+					  <span class="hint">Supported files: jpg, jpeg, png.</span>
+					  <button type="submit">upload</button>
+					</form>
+				</div>
+				<div class="slider-container" style="clear:both">
+					<% for(var i=0; i< imageSet.length; i++) { %>
+						<div class="slider-container-item"><img src="<%= imageSet[i] %>" /></div>
+					<% } %>
+				</div>
 			</div>
 		</div>
     </body>

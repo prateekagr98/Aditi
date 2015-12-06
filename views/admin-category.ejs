@@ -1,14 +1,13 @@
 <!DOCTYPE html>  
 <html lang="en">  
 	<head>
-		<title>Admin Oil Painting | Artist Aditi</title>
+		<title>Admin | Artist Aditi</title>
 		<link rel="stylesheet" href="/stylesheets/admin.css" />
 		<style>
 			body{
 				background: #F8F8F8;
 			}
 		</style>
-
 		<script type="text/javascript" src="/javascripts/jquery-1.11.2.min.js"></script>
 		<script type="text/javascript" src="/javascripts/lazyload.js"></script>
 		<script type="text/javascript" src="/javascripts/admin-script.js"></script>
@@ -18,20 +17,24 @@
 			<a href="/admin/logout" class="btn btn-red" style="position: fixed; top: 15px; right: 15px; text-decoration:none">Logout</a>
 			<% include ./partials/admin-navigation %>
 			<div class="content-area">
-				<div class="form-area">
-					<button class="btn btn-orange delete-images float-right" page="<%= page %>">Delete</button>
-					<form action="/admin/upload/oilPaintings" method="POST" enctype="multipart/form-data" target="_self">
-						<input type="file" name="file" multiple/>
-						<button type="submit" class="btn btn-orange">Upload</button>
-					</form>
+				<div>
+						<input type="text" placeholder="Category Name" id="category_name" />
+						<input type="text" placeholder="Category Slug" id="category_slug" />
+						<button type="button" id="addCategory" class="btn btn-orange">Add Category</button>
 				</div>
-				<div class="slider-container" style="clear:both">
-					<% for(var i=0; i< imageSet.length; i++) { %>
-						<div class="slider-container-item">
-								<img src="<%= imageSet[i] %>" />
-						</div>
+				<br /><br /><br />
+				<table style="width:100%;" border="1">
+					<tr>
+						<th>Name</th>
+						<th>Slug</th>
+					</tr>
+					<% for (var i=0; i<categories.length; i++) { %>
+						<tr>
+							<td><%= categories[i].name %></td>
+							<td><%= categories[i].slug %></td>
+						</tr>
 					<% } %>
-				</div>
+				</table>
 			</div>
 		</div>
     </body>
