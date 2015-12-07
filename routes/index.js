@@ -49,43 +49,53 @@ router.get('/', function (req, res) {
 
 router.get('/media', function (req, res, next) {
 
-  glob("public/images/media/*", null, function (er, imagePaths) {
-    var paths = _.map(imagePaths, function (item) {
-      return item.replace('public', '');
+  CategoriesModel.find({}, function (err, categorySet) {
+    glob("public/images/media/*", null, function (er, imagePaths) {
+      var paths = _.map(imagePaths, function (item) {
+        return item.replace('public', '');
+      });
+      res.render('media', {
+        page: 'media',
+        imageSet: paths,
+        categorySet: categorySet
+      });
     });
-    res.render('media', {
-      page: 'media',
-      imageSet: paths
-    });
-  });
+  })
 });
 
 router.get('/about', function (req, res, next) {
-  res.render('about', {
-    page: 'about'
-  });
+  CategoriesModel.find({}, function (err, categorySet) {
+    res.render('about', {
+      page: 'about',
+      'categorySet': categorySet
+    });
+  })
+
 });
 
 router.get('/contact', function (req, res, next) {
   var success, message;
 
-  if (req.query && req.query.success) {
-    success = req.query.success
-  }
-
-  if (success === 'true') {
-    message = 'Your query has been successfully sent to Aditi Mittal.'
-  } else {
-    if (success === 'false') {
-      message = 'Oops! Your request was not saved. Please try again after some time';
+  CategoriesModel.find({}, function (err, categorySet) {
+    if (req.query && req.query.success) {
+      success = req.query.success
     }
-  }
 
-  res.render('contact', {
-    page: 'contact',
-    message: message,
-    success: success
-  });
+    if (success === 'true') {
+      message = 'Your query has been successfully sent to Aditi Mittal.'
+    } else {
+      if (success === 'false') {
+        message = 'Oops! Your request was not saved. Please try again after some time';
+      }
+    }
+
+    res.render('contact', {
+      page: 'contact',
+      message: message,
+      success: success,
+      categorySet: categorySet
+    });
+  })
 });
 
 router.post('/sendEmail', function (req, res, next) {
