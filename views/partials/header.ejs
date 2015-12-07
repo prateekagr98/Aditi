@@ -2,9 +2,11 @@
 	<a href="/"><img class="logo" src="/images/logo.png" /></a>
 	<ul class="navigation">
 		<a href="/" class="home-tab"><li>Home</li></a>
-		<a href="/oilPaintings" class="oil-painting-tab"><li>Oil Paintings</li></a>
-		<a href="/sketches" class="sketches-tab"><li>Sketches</li></a>
-		<a href="/customGifts" class="custom-gifts-tab"><li>Custom Gifts</li></a>
+		<% for(var i=0; i<categorySet.length; i++){%>
+			<% if(i<3){%>
+				<a href="/<%= categorySet[i].slug %>"><li><%= categorySet[i].name %></li></a>
+			<%}%>
+		<% } %>
 		<a href="/media"><li>Media</li></a>
 		<a href="/contact"><li>Contact</li></a>
 	</ul>
