@@ -138,10 +138,13 @@ router.get('/:category', function (req, res, next) {
         'category_id': category._id
       }, function (err, images) {
         returnObj.imageSet = images;
-        console.log(returnObj);
-        res.render('category', {
-          data: returnObj
-        });
+
+        CategoriesModel.find({}, function (err, categorySet) {
+          res.render('category', {
+            data: returnObj,
+            categorySet: categorySet
+          });
+        })
       })
 
     } else {
