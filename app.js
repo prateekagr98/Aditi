@@ -26,11 +26,6 @@ var express = require('express'),
   AdminModel = require('./models/AdminModel'),
   ImageModel = require('./models/ImageModel');
 
-var fs = require('fs');
-var path = require('path');
-var uid = require('uid2');
-var mime = require('mime');
-
 //Constants
 var TARGET_PATH = path.resolve(__dirname, './public/images/upload/');
 var IMAGE_TYPES = ['image/jpeg', 'image/png'];
