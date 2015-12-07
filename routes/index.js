@@ -1,211 +1,154 @@
 var express = require('express'),
-    router = express.Router(),
-    _ = require('underscore'),
-    glob = require('glob'),
-    ContactModel = require('../models/ContactModel');
+  router = express.Router(),
+  _ = require('underscore'),
+  glob = require('glob'),
+  async = require('async'),
+  ContactModel = require('../models/ContactModel'),
+  CategoriesModel = require('../models/CategoriesModel'),
+  ImageModel = require('../models/ImageModel');
 
 /* GET home page. */
-router.get('/', function (req, res, next) {
+router.get('/', function (req, res) {
 
-    glob("public/images/homepage-slider/*", null, function (er, imagePaths) {
-        var paths = _.map(imagePaths, function (item) {
-            return item.replace('public', '');
-        });
-        res.render('index', {
-            sliderSet: paths
-        });
-    });
-});
+  var returnObj = [];
 
-router.get('/oilPaintings', function (req, res, next) {
+  CategoriesModel.find({}, function (err, categories) {
+    if (err) {
+      console.error(err);
+    }
 
-    glob("public/images/oil-paintings/*", null, function (er, imagePaths) {
-        var paths = _.map(imagePaths, function (item) {
-            return item.replace('public', '');
-        });
-        res.render('oil-paintings', {
-            page: 'oil-paintings',
-            imageSet: paths
-        });
-    });
-});
+    async.each(categories, function (category, next) {
+      var obj = {
+        'name': category.name,
+        'slug': category.slug
+      };
 
-router.get('/portraits', function (req, res, next) {
+      ImageModel.findOne({
+        'category_id': category._id
+      }, function (err, image) {
+        if (err) {
+          console.error(err);
+        }
 
-    glob("public/images/portraits/*", null, function (er, imagePaths) {
-        var paths = _.map(imagePaths, function (item) {
-            return item.replace('public', '');
-        });
-        res.render('portraits', {
-            page: 'portraits',
-            imageSet: paths
-        });
-    });
-});
+        if (image) {
+          obj.image = image.url;
+          returnObj.push(obj);
+        }
 
-router.get('/valentine', function (req, res, next) {
+        next();
 
-    glob("public/images/valentine/*", null, function (er, imagePaths) {
-        var paths = _.map(imagePaths, function (item) {
-            return item.replace('public', '');
-        });
-        res.render('valentine', {
-            page: 'valentine',
-            imageSet: paths
-        });
-    });
-});
+      })
+    }, function (err) {
+      res.render('index', {
+        categorySet: returnObj
+      });
+    })
 
-router.get('/marble', function (req, res, next) {
-
-    glob("public/images/marble/*", null, function (er, imagePaths) {
-        var paths = _.map(imagePaths, function (item) {
-            return item.replace('public', '');
-        });
-        res.render('marble', {
-            page: 'marble',
-            imageSet: paths
-        });
-    });
-});
-
-router.get('/bridal', function (req, res, next) {
-
-    glob("public/images/bridal/*", null, function (er, imagePaths) {
-        var paths = _.map(imagePaths, function (item) {
-            return item.replace('public', '');
-        });
-        res.render('bridal', {
-            page: 'bridal',
-            imageSet: paths
-        });
-    });
-});
-
-router.get('/cakes', function (req, res, next) {
-
-    glob("public/images/cakes/*", null, function (er, imagePaths) {
-        var paths = _.map(imagePaths, function (item) {
-            return item.replace('public', '');
-        });
-        res.render('cakes', {
-            page: 'cakes',
-            imageSet: paths
-        });
-    });
-});
-
-router.get('/sketches', function (req, res, next) {
-
-    glob("public/images/sketches/*", null, function (er, imagePaths) {
-        var paths = _.map(imagePaths, function (item) {
-            return item.replace('public', '');
-        });
-        res.render('sketches', {
-            page: 'sketches',
-            imageSet: paths
-        });
-    });
-});
-
-router.get('/customGifts', function (req, res, next) {
-
-    glob("public/images/custom-gifts/*", null, function (er, imagePaths) {
-        var paths = _.map(imagePaths, function (item) {
-            return item.replace('public', '');
-        });
-        res.render('custom-gifts', {
-            page: 'custom-gifts',
-            imageSet: paths
-        });
-    });
-});
-
-router.get('/rakhi', function (req, res, next) {
-
-    glob("public/images/rakhi/*", null, function (er, imagePaths) {
-        var paths = _.map(imagePaths, function (item) {
-            return item.replace('public', '');
-        });
-        res.render('rakhi', {
-            page: 'rakhi',
-            imageSet: paths
-        });
-    });
+  });
 });
 
 router.get('/media', function (req, res, next) {
 
-    glob("public/images/media/*", null, function (er, imagePaths) {
-        var paths = _.map(imagePaths, function (item) {
-            return item.replace('public', '');
-        });
-        res.render('media', {
-            page: 'media',
-            imageSet: paths
-        });
+  glob("public/images/media/*", null, function (er, imagePaths) {
+    var paths = _.map(imagePaths, function (item) {
+      return item.replace('public', '');
     });
+    res.render('media', {
+      page: 'media',
+      imageSet: paths
+    });
+  });
 });
 
 router.get('/about', function (req, res, next) {
-    res.render('about', {
-        page: 'about'
-    });
+  res.render('about', {
+    page: 'about'
+  });
 });
 
 router.get('/contact', function (req, res, next) {
-    var success, message;
+  var success, message;
 
-    if (req.query && req.query.success) {
-        success = req.query.success
+  if (req.query && req.query.success) {
+    success = req.query.success
+  }
+
+  if (success === 'true') {
+    message = 'Your query has been successfully sent to Aditi Mittal.'
+  } else {
+    if (success === 'false') {
+      message = 'Oops! Your request was not saved. Please try again after some time';
     }
+  }
 
-    if (success === 'true') {
-        message = 'Your query has been successfully sent to Aditi Mittal.'
-    } else {
-        if (success === 'false') {
-            message = 'Oops! Your request was not saved. Please try again after some time';
-        }
-    }
-
-    res.render('contact', {
-        page: 'contact',
-        message: message,
-        success: success
-    });
+  res.render('contact', {
+    page: 'contact',
+    message: message,
+    success: success
+  });
 });
 
 router.post('/sendEmail', function (req, res, next) {
 
-    var newForm = new ContactModel({
-        name: req.body.name,
-        email: req.body.email,
-        number: req.body.number,
-        message: req.body.message,
-        created_at: (new Date()).toString()
-    });
+  var newForm = new ContactModel({
+    name: req.body.name,
+    email: req.body.email,
+    number: req.body.number,
+    message: req.body.message,
+    created_at: (new Date()).toString()
+  });
 
-    newForm.save(function (err, newForm) {
-        if (err) {
-            res.redirect('/contact?success=false');
-            return;
-        }
+  newForm.save(function (err, newForm) {
+    if (err) {
+      res.redirect('/contact?success=false');
+      return;
+    }
 
-        res.redirect('/contact?success=true');
-    });
+    res.redirect('/contact?success=true');
+  });
 });
 
 router.get('/viewContacts', function (req, res, next) {
-    ContactModel.find({}, function (err, mails) {
-        if (err) {
-            console.log(error);
-            return;
-        }
+  ContactModel.find({}, function (err, mails) {
+    if (err) {
+      console.log(error);
+      return;
+    }
 
-        res.render('viewContacts', {
-            mails: mails.reverse()
-        });
+    res.render('viewContacts', {
+      mails: mails.reverse()
     });
+  });
 });
+
+router.get('/:category', function (req, res, next) {
+  CategoriesModel.findOne({
+    'slug': req.params.category
+  }, function (err, category) {
+    if (err) {
+      return console.error(err);
+    }
+
+    if (category) {
+      var returnObj = {
+        'category': category
+      };
+
+      ImageModel.find({
+        'category_id': category._id
+      }, function (err, images) {
+        returnObj.imageSet = images;
+        console.log(returnObj);
+        res.render('category', {
+          data: returnObj
+        });
+      })
+
+    } else {
+      res.redirect('/');
+      return;
+    }
+  })
+})
 
 module.exports = router;

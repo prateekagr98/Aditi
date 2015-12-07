@@ -2,27 +2,27 @@
 <html>
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Artist Aditi</title>
+		<title>Oil Paintings | Artist Aditi</title>
 		<link rel="stylesheet" href="/stylesheets/style.css" />
+		<link rel="stylesheet" href="/stylesheets/jquery.lightbox.min.css" />
 
 		<script type="text/javascript" src="/javascripts/jquery-1.11.2.min.js"></script>
+		<script type="text/javascript" src="/javascripts/jquery.lightbox.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.1/masonry.pkgd.min.js"></script>
 		<script type="text/javascript" src="/javascripts/script.js"></script>
 	</head>
 	<body>
 		<div class="main-container">
 			<% include ./partials/header %>
-			<div class="content-area">
-				<h2 class="heading">Galleries</h2>
+			<div class="content-area category">
+				<h2 class="heading"><%= data.category.name %></h2>
 				<div class="gallery">
-					<% for(var i=0; i<categorySet.length; i++){%>
-						<div class="gallery-item">
-							<a href="/<%= categorySet[i].slug %>"><img src="<%= categorySet[i].image %>" /></a>
-							<p><%= categorySet[i].name %></p>
+					<% for(var i=0; i< data.imageSet.length; i++) { %>
+						<div class="gallery-item with-border">
+							<a href="<%= data.imageSet[i].url %>" rel="lightbox"><img src="<%= data.imageSet[i].url %>" /></a>
 						</div>
 					<% } %>
 				</div>
-				<a href="https://www.facebook.com/artistaditi" target="_blank"><img class="fb-icon" src="/images/facebook-icon.png" /></a>
 			</div>
 		<footer>
 			Copyright &copy; Artist Aditi
