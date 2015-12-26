@@ -1,0 +1,58 @@
+/* Regular font colors */
+$color-font-dark: #222222;
+$color-font-light: #7F7F7F;
+$color-font-primary: #03A9F4;
+$color-font-secondary: #485DAC;
+$color-font-tertiary: #32CFC0;
+
+$icon-color: rgba(3, 169, 244, 0.5);
+
+/* Header font colors */
+$color-header-dark: #323132;
+$color-header-light: #323232;
+$color-header-search-bg: #323232;
+
+/* Error colors */
+$color-error: #C00000;
+
+/* Border */
+$border-color: rgb(8, 108, 132);
+$border-color-alpha: rgba(8, 108, 132, 0.32);
+$border-color: rgb(8, 108, 132);
+$border-color-underline: rgba(0, 0, 0, 0.12);
+$border-color-light: #F5F5F5;
+
+/* Feed Color */
+$color-feed-light: #F7F7F7;
+$color-feed-alpha: rgba(0, 0, 0, 0.5);
+
+$border-basic: 1px solid $border-color-alpha;
+$border-grey: 1px solid #d8d8d8;
+
+/* Border radius */
+$bdv: 2px;
+$border-radius: $bdv;
+$border-radius-left: $bdv 0px 0px $bdv;
+$border-radius-right: 0px $bdv $bdv 0px;
+$border-radius-top: $bdv $bdv 0px 0px;
+$border-radius-bottom: 0px 0px $bdv $bdv;
+
+/* Button Colour */
+$btn-color-success: #1AB554;
+$button-background: #03A9F4;
+
+/* Padding */
+$padding-xxl: 30px;
+$padding-xl: 24px;
+$padding-lg: 16px;
+$padding-md: 12px;
+$padding-sm: 8px;
+$padding-x-sm: 3px;
+
+/* Margin */
+$margin-xxl: 30px;
+$margin-xl: 24px;
+$margin-lg: 16px;
+$margin-md: 12px;
+$margin-sm: 8px;
+$margin-x-sm: 3px;

@@ -1,0 +1,65 @@
+$default-prefixes: webkit moz ms o;
+
+@mixin prefix($property, $value, $prefixes: $default-prefixes) {
+    // Usage: @include prefix(property, value)
+    @each $prefix in $prefixes {
+        -#{$prefix}-#{$property}: #{$value};
+    }
+
+    #{$property}: #{$value};
+}
+
+@mixin transitionTx($transition, $prefixes: $default-prefixes) {
+    @each $prefix in $prefixes {
+        -#{$prefix}-transition: -#{$prefix}-transform #{$transition};
+    }
+
+    transition: transform #{$transition};
+}
+
+// Generic transform
+@mixin transform($transforms) {
+    @include prefix("transform", $transforms);
+}
+
+@mixin transformOrigin($origin) {
+    @include prefix("transform-origin", $origin);
+}
+
+@mixin translate($x, $y) {
+    @include transform(translate($x, $y));
+}
+
+@mixin transition($value...) {
+    @include prefix("transition", $value);
+}
+
+//border radius creator
+@mixin border-radius($radius) {
+    @include prefix("border-radius", $radius);
+}
+
+@mixin box-shadow($value) {
+    @include prefix("box-shadow", $value);
+}
+
+/**
+ * Handles PX to REM conversion
+ * Source: http://www.stubbornella.org/content/2013/07/01/easy-peasy-rem-conversion-with-sass/
+ */
+
+@function calculateRem($size) {
+    $remSize: $size / 16px;
+
+    @return #{$remSize}rem;
+}
+
+@mixin fontSize($size) {
+    font-size: $size; //Fallback in px
+    font-size: calculateRem($size);
+}
+
+@mixin lineHeight($size) {
+    line-height: $size; //Fallback in px
+    line-height: calculateRem($size);
+}

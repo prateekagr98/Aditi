@@ -1,0 +1,30 @@
+.sidebar {
+  &-container {}
+
+  &-item {
+    padding: 15px;
+    border-bottom: $border-basic;
+
+    &:last-child {
+      border-bottom: 0px;
+    }
+
+    &:hover {
+      cursor: pointer;
+      background-color: $border-color-light;
+    }
+
+    &.active {
+      color: white;
+      background-color: $color-font-tertiary;
+    }
+  }
+
+  &-left {
+    padding-right: $padding-md;
+  }
+
+  &-right {
+    padding-left: $padding-md;
+  }
+}
