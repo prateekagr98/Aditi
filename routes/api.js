@@ -50,5 +50,15 @@ router.post('/images', function (req, res) {
 
 });
 
+router.delete('/images/:id', function (req, res) {
+
+  ImageModel.remove({
+    '_id': req.params.id
+  }, function (err, image) {
+    res.status(201).json(image);
+  })
+
+});
+
 
 module.exports = router;

@@ -16,20 +16,15 @@
 					<input type="button" class="btn" value="Save" ng-click="saveImage()" />
 				</div>
 			</div>
-			<div class="pure-g table-header">
-				<div class="pure-u-1-2">
-					Category ID
-				</div>
-				<div class="pure-u-1-2">
-					Image URL
-				</div>
-			</div>
-			<div ng-repeat="image in images" class="pure-g table-row">
-				<div class="pure-u-1-2">
-					{{image.category_id}}
-				</div>
-				<div class="pure-u-1-2">
-					{{image.url}}
+			<div class="pure-g">
+				<div ng-repeat="image in images" class="pure-u-1-2 image-container">
+					<div class="pos-has">
+						<p class="pos pos-l-t image-category">
+							{{categoryMap[image.category_id]}}
+							<i class="icon ion-android-delete pos-r-t" ng-click="deleteImage(image._id)"></i>
+						</p>
+						<img ng-src="{{image.url}}" />
+					</div>
 				</div>
 			</div>
 		</div>

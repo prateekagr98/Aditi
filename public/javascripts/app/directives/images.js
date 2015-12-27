@@ -9,11 +9,16 @@ syncApp.directive('images', [
       function ($scope, Categories, Images) {
 
         $scope.images = [];
+        $scope.categoryMap = {};
         $scope.category_id = "-1";
 
         Categories.get()
           .then(function (response) {
             $scope.categories = response.categories;
+
+            _.forEach($scope.categories, function (item) {
+              $scope.categoryMap[item._id] = item.name;
+            });
           })
 
         Images.get()
@@ -30,6 +35,15 @@ syncApp.directive('images', [
             $scope.category_id = "-1";
             $scope.url = '';
           })
+        }
+
+        $scope.deleteImage = function (id) {
+          Images.remove(id)
+          .then(function (response) {
+            _.remove($scope.images, function (item) {
+              return item._id == id;
+            })
+          });
         }
       }
     ]

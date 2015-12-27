@@ -19,7 +19,7 @@ syncApp.factory('Images', [
   '$resource',
   function ($resource) {
 
-    var resource = $resource('/portal/api/images');
+    var resource = $resource('/portal/api/images/:id');
 
     return {
       get: function () {
@@ -27,6 +27,11 @@ syncApp.factory('Images', [
       },
       save: function (data) {
         return resource.save({}, data).$promise;
+      },
+      remove: function(id) {
+        return resource.remove({
+          'id': id
+        }, {}).$promise;
       }
     }
   }
