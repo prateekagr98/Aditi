@@ -4,4 +4,9 @@ input, select {
   background-color: #f5f5f5;
   border: none;
   padding: 4px 8px;
+  height: 40px;
+
+  &[type="button"] {
+    width: auto;
+  }
 }

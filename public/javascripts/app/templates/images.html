@@ -4,16 +4,16 @@
 			<div class="pure-g">
 				<div class="pure-u-7-24">
 					<select ng-model="category_id">
+						<option value="-1" disabled selected>Select a Category</option>
 						<option ng-repeat="category in categories" value="{{category._id}}">{{category.name}}</option>
 					</select>
 				</div>
 				<div class="pure-u-1-24"></div>
-				<div class="pure-u-7-24">
+				<div class="pure-u-11-24">
 					<input type="text" placeholder="Image Url" ng-model="url" />
 				</div>
-				<div class="pure-u-1-24"></div>
-				<div class="pure-u-7-24">
-					<input type="button" class="btn" value="Save" ng-click="saveImage()" />
+				<div class="pure-u-3-24 text-right">
+					<input type="button" class="btn btn-primary" value="Save" ng-click="saveImage()" />
 				</div>
 			</div>
 			<div class="pure-g">
