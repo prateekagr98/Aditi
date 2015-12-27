@@ -14,3 +14,20 @@ syncApp.factory('Categories', [
     }
   }
 ])
+
+syncApp.factory('Images', [
+  '$resource',
+  function ($resource) {
+
+    var resource = $resource('/portal/api/images');
+
+    return {
+      get: function () {
+        return resource.get().$promise;
+      },
+      save: function (data) {
+        return resource.save({}, data).$promise;
+      }
+    }
+  }
+])

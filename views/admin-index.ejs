@@ -5,12 +5,14 @@
 		<link rel="stylesheet" href="/stylesheets/pure-min.css" />
 		<link rel="stylesheet" href="/stylesheets/admin.css" />
 		<script type="text/javascript" src="/javascripts/jquery-1.11.2.min.js"></script>
+		<script type="text/javascript" src="/javascripts/lodash.js"></script>
 		<script type="text/javascript" src="/javascripts/angular.min.js"></script>
 		<script type="text/javascript" src="/javascripts/angular-resource.min.js"></script>
 		<script type="text/javascript" src="/javascripts/ui-router.min.js"></script>
 		<script type="text/javascript" src="/javascripts/app/app.base.js"></script>
 		<script type="text/javascript" src="/javascripts/app/services.js"></script>
 		<script type="text/javascript" src="/javascripts/app/directives/category.js"></script>
+		<script type="text/javascript" src="/javascripts/app/directives/images.js"></script>
 		<base href="/admin/"></base>
 	</head>
 	<body ng-app="syncApp">
@@ -24,6 +26,7 @@
 				</div>
 				<div class="pure-u-18-24 sidebar-right">
 					<div ui-view name="category"></div>
+					<div ui-view name="images"></div>
 				</div>
 			</div>
 		</div>

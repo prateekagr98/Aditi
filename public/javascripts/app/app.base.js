@@ -18,6 +18,18 @@ syncApp.config([
         }
       })
 
+      .state('images', {
+        url: '/images',
+        views: {
+          'sidebar': {
+            templateUrl: '/javascripts/app/templates/sidebar.html'
+          },
+          'images': {
+            templateUrl: '/javascripts/app/templates/images.html'
+          }
+        }
+      })
+
     $urlRouterProvider.otherwise("/");
 
   }
