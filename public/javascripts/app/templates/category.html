@@ -1,7 +1,35 @@
 <div category>
 	<div class="card">
 		<div class="card-block">
-			<input type="text" placeholder="Category Name" ng-model="temp" />
+			<div class="pure-g">
+				<div class="pure-u-7-24">
+					<input type="text" placeholder="Category Name" ng-model="name" />
+				</div>
+				<div class="pure-u-1-24"></div>
+				<div class="pure-u-7-24">
+					<input type="text" placeholder="Category Slug" ng-model="slug" />
+				</div>
+				<div class="pure-u-1-24"></div>
+				<div class="pure-u-7-24">
+					<input type="button" class="btn" value="Save" ng-click="saveCategory()" />
+				</div>
+			</div>
+			<div class="pure-g table-header">
+				<div class="pure-u-1-2">
+					Category Name
+				</div>
+				<div class="pure-u-1-2">
+					Category Slug
+				</div>
+			</div>
+			<div ng-repeat="category in categories" class="pure-g table-row">
+				<div class="pure-u-1-2">
+					{{category.name}}
+				</div>
+				<div class="pure-u-1-2">
+					{{category.slug}}
+				</div>
+			</div>
 		</div>
 	</div>
 </div>

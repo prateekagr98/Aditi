@@ -9,8 +9,19 @@ syncApp.directive('category', [
       function ($scope, Categories) {
         Categories.get()
           .then(function (response) {
-            console.log(response);
+            $scope.categories = response.categories;
           })
+
+        $scope.saveCategory = function () {
+          Categories.save({
+            'name':$scope.name,
+            'slug':$scope.slug
+          }).then(function (response) {
+            $scope.categories.unshift(response);
+            $scope.name = '';
+            $scope.slug = '';
+          })
+        }
       }
     ]
     return {

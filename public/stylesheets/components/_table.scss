@@ -1,0 +1,16 @@
+.table {
+  &-header {
+    font-weight: bold;
+    text-align: center;
+    padding: 4px 8px;
+  }
+
+  &-row {
+    text-align: center;
+    padding: 4px 8px;
+
+    &:nth-child(2n+1) {
+      background: #F5F5F5;
+    }
+  }
+}
