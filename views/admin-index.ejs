@@ -2,38 +2,28 @@
 <html lang="en">  
 	<head>
 		<title>Admin | Artist Aditi</title>
+		<link rel="stylesheet" href="/stylesheets/pure-min.css" />
 		<link rel="stylesheet" href="/stylesheets/admin.css" />
-		<style>
-			body{
-				background: #F8F8F8;
-			}
-		</style>
 		<script type="text/javascript" src="/javascripts/jquery-1.11.2.min.js"></script>
-		<script type="text/javascript" src="/javascripts/lazyload.js"></script>
-		<script type="text/javascript" src="/javascripts/admin-script.js"></script>
+		<script type="text/javascript" src="/javascripts/angular.min.js"></script>
+		<script type="text/javascript" src="/javascripts/angular-resource.min.js"></script>
+		<script type="text/javascript" src="/javascripts/ui-router.min.js"></script>
+		<script type="text/javascript" src="/javascripts/app/app.base.js"></script>
+		<script type="text/javascript" src="/javascripts/app/services.js"></script>
+		<script type="text/javascript" src="/javascripts/app/directives/category.js"></script>
+		<base href="/admin/"></base>
 	</head>
-	<body>
+	<body ng-app="syncApp">
+		<div class="pos-has">
+			<a href="/admin/logout" class="btn btn-red pos pos-r-t">Logout</a>
+		</div>
 		<div class="main-container">
-			<a href="/admin/logout" class="btn btn-red" style="position: fixed; top: 15px; right: 15px; text-decoration:none">Logout</a>
-			<% include ./partials/admin-navigation %>
-			<div class="content-area">
-				<div class="form-area">
-					<button class="btn btn-orange delete-images float-right">Delete</button>
-					<form action="/upload" method="post" enctype="multipart/form-data">
-						<select name="category_id">  
-					  	<% for(var i=0; i<categories.length; i++) { %>
-					  		<option value="<%= categories[i]._id %>"><%= categories[i].name %></option>
-					  	<% } %>
-						</select>
-					  <input type="file" name="file" id="file" multiple />
-					  <span class="hint">Supported files: jpg, jpeg, png.</span>
-					  <button type="submit">upload</button>
-					</form>
+			<div class="pure-g">
+				<div class="pure-u-5-24">
+					<div ui-view name="sidebar"></div>
 				</div>
-				<div class="slider-container" style="clear:both">
-					<% for(var i=0; i< imageSet.length; i++) { %>
-						<div class="slider-container-item"><img src="<%= imageSet[i].url %>" /></div>
-					<% } %>
+				<div class="pure-u-18-24 sidebar-right">
+					<div ui-view name="category"></div>
 				</div>
 			</div>
 		</div>

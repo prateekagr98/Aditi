@@ -42,10 +42,7 @@ router.get('/', isAuthenticated, function (req, res, next) {
         return;
       }
 
-      res.render('admin-index', {
-        categories: categories,
-        imageSet: images
-      });
+      res.render('admin-index', {});
 
     })
   })

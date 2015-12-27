@@ -66,7 +66,8 @@ passport.deserializeUser(function (id, done) {
 
 var routes = require('./routes/index'),
   users = require('./routes/users'),
-  admin = require('./routes/admin');
+  admin = require('./routes/admin'),
+  api = require('./routes/api');
 
 var app = express();
 
@@ -126,6 +127,7 @@ app.post('/upload', upload.any(), function (req, res, next) {
 app.use('/admin', admin);
 app.use('/', routes);
 app.use('/users', users);
+app.use('/portal/api', api);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
