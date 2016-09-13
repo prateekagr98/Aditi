@@ -23,15 +23,17 @@ router.get('/', function (req, res) {
         'slug': category.slug
       };
 
-      ImageModel.findOne({
+      ImageModel.find({
         'category_id': category._id
-      }, function (err, image) {
+      }, function (err, images) {
         if (err) {
           console.error(err);
         }
 
-        if (image) {
-          obj.image = image.url;
+        if (images.length) {
+          obj.images = _.map(images, function(item){
+            return item.url;
+          });
           returnObj.push(obj);
         }
 
