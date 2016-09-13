@@ -22,12 +22,3 @@
 
   });
 })();
-
-function startCarousel(selector){
-  $(selector).owlCarousel({
-    autoPlay: 3000,
-    singleItem: true,
-    pagination: false,
-    autoHeight: true
-  });
-}

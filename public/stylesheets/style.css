@@ -396,6 +396,9 @@ Responsive CSS
     }
 }
 
+.slider {
+    background: rgba(255, 255, 255, 0.9);
+}
 
 .slider .item{
   margin: 0px;
