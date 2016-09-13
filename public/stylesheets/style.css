@@ -64,7 +64,7 @@ a {
 }
 
 .logo {
-    width: 150px;
+    width: 125px;
     margin-left: 50px;
 }
 
@@ -389,6 +389,6 @@ Responsive CSS
 
     .logo {
         margin-left: 10px;
-        width: 120px;
+        width: 95px;
     }
 }
