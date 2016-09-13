@@ -143,6 +143,7 @@ Gallery
 
 .with-border img {
     border: 10px solid #FFFFFF;
+    border-radius: 3px;
 }
 
 .gallery-item p {
@@ -238,7 +239,8 @@ Contact Form
     padding: 10px 20px;
     font-size: 14px;
     color: #E1175F;
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0 1px 2px 1px rgba(255, 255, 255, 0.2), 0 -1px 1px 0 rgba(0, 0, 0, 0.05);
 }
 
 .contact-form button:hover {
@@ -255,7 +257,7 @@ Contact Form
 }
 
 .contact-caption {
-    color: #E1175F;
+    color: black;
 }
 
 /*
@@ -264,12 +266,17 @@ About Page
 ============================================
 */
 
-.fb-icon {
+.fb-icon, .insta-icon {
     position: fixed;
-    width: 40px;
+    height: 40px;
     bottom: 20px;
     right: 30px;
     border-radius: 100%;
+}
+
+.insta-icon {
+    right: 90px;
+    bottom: 19px;
 }
 
 .about-heading {
