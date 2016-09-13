@@ -5,7 +5,7 @@ body {
     font: 14px 'Lucida Grande', Helvetica, Arial, sans-serif;
 
     /*    background: url("http://www.thinkpilgrim.com/wp-content/uploads/2014/11/colorful.jpg") no-repeat;*/
-    background: url("/images/bg.jpeg") no-repeat;
+    background: url("/images/new_bg.jpg") no-repeat;
     background-size: cover;
     background-attachment: fixed;
 }
