@@ -66,6 +66,7 @@ a {
 .logo {
     width: 125px;
     margin-left: 50px;
+    margin-top: 25px;
 }
 
 footer {
@@ -390,5 +391,6 @@ Responsive CSS
     .logo {
         margin-left: 10px;
         width: 95px;
+        margin-top: 10px;
     }
 }
