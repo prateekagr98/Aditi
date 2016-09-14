@@ -2,12 +2,14 @@
 
   $(document).ready(function () {
 
-    $(".slider").owlCarousel({
-      autoPlay: 3000,
-      singleItem: true,
-      pagination: false,
-      autoHeight: true
-    });
+    if($(".slider").length){
+      $(".slider").owlCarousel({
+        autoPlay: 3000,
+        singleItem: true,
+        pagination: false,
+        autoHeight: true
+      });
+    }
 
     setTimeout(function () {
       $('.gallery').masonry({
